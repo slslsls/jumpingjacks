@@ -1,0 +1,7 @@
+Allow user to display the rule set they're using, as a reference so they can study outright
+
+Allow user to specify scenario subsets to study, for example only early position, or only pairs in the hole, etc
+
+Accessibility
+
+Different languages

@@ -11,9 +11,9 @@ function getRandomScenario(args) {
   let position = args && args.position ? args.position : randomObjectKey(stageObject[action]);
   let leadUp = args && args.leadUp ? args.leadUp : randomObjectKey(stageObject[action][position]);
   let potentialGroups = stageObject[action][position][leadUp];
-  let selectedGroup = randomArrayElement(potentialGroups);
-  let cards = randomArrayElement(groups[selectedGroup]);
-  return { stage, action, position, leadUp, selectedGroup, cards };
+  let group = randomArrayElement(potentialGroups);
+  let cards = randomArrayElement(groups[group]);
+  return { stage, action, position, leadUp, group, cards };
 }
 
 function randomObjectKey(obj) {
@@ -30,4 +30,6 @@ function randomIntFromInterval(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-console.dir(getRandomScenario(), {depth: 5});
+module.exports = {
+  getRandomScenario
+};

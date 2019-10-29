@@ -5,3 +5,5 @@ Allow user to specify scenario subsets to study, for example only early position
 Accessibility
 
 Different languages
+
+Blackjack, Paigou, other games

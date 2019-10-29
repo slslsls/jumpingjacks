@@ -38,76 +38,36 @@
   },
   "Call": {
     "Early": {
-      "Folded to you": [],
-      "One caller before you": [],
       "Two or more callers": [3,4],
       "Raised, no callers": [2],
       "Raised, cold callers": [2,4]
     },
     "Mid": {
-      "Folded to you": [],
-      "One caller before you": [],
       "Two or more callers": [4],
       "Raised, no callers": [2],
       "Raised, cold callers": [2,4]
     },
     "Late": {
-      "Folded to you": [],
       "One caller before you": [4,5],
       "Two or more callers": [4,5],
       "Raised, no callers": [2],
       "Raised, cold callers": [2,4]
     },
     "SB": {
-      "Folded to you": [],
       "One caller before you": [4,5],
       "Two or more callers": [4,5],
       "Raised, no callers": [2],
       "Raised, cold callers": [2,4]
     },
     "BB": {
-      "Folded to you": [],
-      "One caller before you": [],
-      "Two or more callers": [],
       "Raised, no callers": [2,3],
       "Raised, cold callers": [2,3,4]
     }
   },
   "Check": {
-    "Early": {
-      "Folded to you": [],
-      "One caller before you": [],
-      "Two or more callers": [],
-      "Raised, no callers": [],
-      "Raised, cold callers": []
-    },
-    "Mid": {
-      "Folded to you": [],
-      "One caller before you": [],
-      "Two or more callers": [],
-      "Raised, no callers": [],
-      "Raised, cold callers": []
-    },
-    "Late": {
-      "Folded to you": [],
-      "One caller before you": [],
-      "Two or more callers": [],
-      "Raised, no callers": [],
-      "Raised, cold callers": []
-    },
-    "SB": {
-      "Folded to you": [],
-      "One caller before you": [],
-      "Two or more callers": [],
-      "Raised, no callers": [],
-      "Raised, cold callers": []
-    },
     "BB": {
-      "Folded to you": [],
       "One caller before you": [4,5],
-      "Two or more callers": [3,4,5],
-      "Raised, no callers": [],
-      "Raised, cold callers": []
+      "Two or more callers": [3,4,5]
     }
   },
   "Fold": {
@@ -126,23 +86,14 @@
       "Raised, cold callers": [3,5]
     },
     "Late": {
-      "Folded to you": [],
-      "One caller before you": [],
-      "Two or more callers": [],
       "Raised, no callers": [3,4,5],
       "Raised, cold callers": [3,5]
     },
     "SB": {
-      "Folded to you": [],
-      "One caller before you": [],
-      "Two or more callers": [],
       "Raised, no callers": [3,4,5],
       "Raised, cold callers": [3,5]
     },
     "BB": {
-      "Folded to you": [],
-      "One caller before you": [],
-      "Two or more callers": [],
       "Raised, no callers": [5],
       "Raised, cold callers": [5]
     }

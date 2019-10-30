@@ -1,6 +1,5 @@
 // const mocha = require('mocha');
 const { expect } = require('chai');
-const proxyquire = require('proxyquire');
 const { getRandomScenario } = require('./scenarioUtils');
 const groups = require('../scenarios/groups');
 const preFlop = require('../scenarios/pre-flop');
@@ -17,28 +16,23 @@ function validateScenario(groupsObject, stageObject, scenario) {
 
 describe('getRandomScenario', () => {
 
-  it('should return a valid random scenario when given no args', () => {
-    let randomScenario = getRandomScenario();
-    validateScenario(groups, preFlop, randomScenario);
-  });
-
-  const situations = [
-    { id: 1, args: { stage: 'preFlop', action: 'Fold', leadUp: 'Two or more callers' }, expectedGroups: [5] },
-    { id: 2, args: { action: 'check' }, expectedGroups: [3,4,5] },
-    { id: 3, args: { action: 'call', leadUp: 'Raised, no callers' }, expectedGroups: [2,3] },
-    { id: 4, args: { action: 'raise', leadUp: 'Raised, no callers' }, expectedGroups: [1] }
+  const args = [
+    { stage: 'preFlop', position: 'Early' },
+    { stage: 'preFlop', position: 'Mid' },
+    { stage: 'preFlop', position: 'Late' },
+    { stage: 'preFlop', position: 'SB' },
+    { stage: 'preFlop', position: 'BB' }
   ];
 
-  _.each(situations, s => {
-    it(`should return a valid random scenario within specifications (situation ${s.id})`, () => {
-      let randomScenario = getRandomScenario(s.args);
-      validateScenario(groups, preFlop, randomScenario);
-      expect(s.expectedGroups).to.contain(randomScenario.group);
+  _.each(args, a => {
+    it(`should return a valid scenario for ${a.stage} stage, ${a.position} position`, () => {
+      let scenario = getRandomScenario(a.stage, a.position);
+      validateScenario(groups, preFlop, scenario);
     });
   });
 
-  it.skip('should return empty object if args do not lead to any valid scenarios', () => {
-
+  it('should throw error if stage and position are not specified', () => {
+    expect(getRandomScenario.bind(this)).to.throw();
   });
 
 });

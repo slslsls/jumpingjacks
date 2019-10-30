@@ -3,7 +3,7 @@ import React from 'react';
 class Result extends React.Component {
   render() {
     return (
-      <p>{this.props.result}</p>
+      <p>{this.props.value}</p>
     );
   }
 }

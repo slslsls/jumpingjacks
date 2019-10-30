@@ -15,7 +15,7 @@ class Container extends React.Component {
       this.setState({ result: 'Good job!' });
     } else {
       console.log('Shit.')
-      this.setState({ result: 'Shit.' })
+      this.setState({ result: 'Shit.' });
     }
   }
 

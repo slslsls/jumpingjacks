@@ -4,17 +4,18 @@ import ScenarioUtils from '../utils/scenarioUtils';
 class Table extends React.Component {
   constructor(props) {
     super(props);
-    this.getRandomScenario = this.getRandomScenario.bind(this);
-  }
-
-  getRandomScenario() {
-
+    this.state = { scenario: ScenarioUtils.getRandomScenario('preFlop', 'Early') };
   }
 
   render() {
     return (
-      <p onClick={this.getRandomScenario}>hi</p>
-    )
+      <div>
+        <p>{this.state.scenario.stage}</p>
+        <p>{this.state.scenario.position}</p>
+        <p>{this.state.scenario.leadUp}</p>
+        <p>{this.state.scenario.cards}</p>
+      </div>
+    );
   }
 }
 

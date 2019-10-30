@@ -1,12 +1,10 @@
 import React from 'react';
 
 class Result extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { result: '' };
-  }
   render() {
-    return (<p>{this.state.result}</p>);
+    return (
+      <p>{this.props.result}</p>
+    );
   }
 }
 

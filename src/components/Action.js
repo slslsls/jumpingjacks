@@ -1,10 +1,9 @@
 import React from 'react';
-// import '../App.css';
 
 class Action extends React.Component {
   render() {
     return (
-      <div className="action-button">
+      <div className="action-button" onClick={e => { this.props.clickHandler(e, this.props.name) }}>
         {this.props.name}
       </div>
     );

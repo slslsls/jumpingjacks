@@ -6,22 +6,38 @@ import Result from './Result';
 class Container extends React.Component {
   state = {
     scenario: ScenarioUtils.getRandomScenario('preFlop', 'Early'),
+    actionHasBeenTaken: false,
     result: ''
   };
 
+  getNewScenario = () => {
+    if (this.state.actionHasBeenTaken) {
+      this.setState({
+        scenario: ScenarioUtils.getRandomScenario('preFlop', 'Early'),
+        actionHasBeenTaken: false
+      });
+    }
+  }
+
   evaluate = (e, action) => {
-    if (action == this.state.scenario.action) {
-      console.log('Good job!')
-      this.setState({ result: 'Good job!' });
-    } else {
-      console.log('Shit.')
-      this.setState({ result: 'Shit.' });
+    if (!this.state.actionHasBeenTaken) {
+      if (action == this.state.scenario.action) {
+        this.setState({
+          result: 'Good job!',
+          actionHasBeenTaken: true
+        });
+      } else {
+        this.setState({
+          result: 'Shit.',
+          actionHasBeenTaken: true
+        });
+      }
     }
   }
 
   render() {
     return (
-      <div>
+      <div onClick={this.getNewScenario}>
         <p>{this.state.scenario.stage}</p>
         <p>{this.state.scenario.position}</p>
         <p>{this.state.scenario.leadUp}</p>

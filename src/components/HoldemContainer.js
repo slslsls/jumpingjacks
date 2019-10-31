@@ -3,7 +3,7 @@ import ScenarioUtils from '../utils/scenarioUtils';
 import Action from './Action';
 import Result from './Result';
 
-class Container extends React.Component {
+class HoldemContainer extends React.Component {
   state = {
     scenario: ScenarioUtils.getRandomScenario('preFlop', 'Early'),
     actionHasBeenTaken: false,
@@ -53,4 +53,4 @@ class Container extends React.Component {
   }
 }
 
-export default Container;
+export default HoldemContainer;

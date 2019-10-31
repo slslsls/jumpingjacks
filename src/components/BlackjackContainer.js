@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as Card7D } from '../assets/7D.svg';
+import { ReactComponent as Card7D } from '../assets/JH.svg';
 import { ReactComponent as Card7S } from '../assets/7S.svg';
 
 class BlackjackContainer extends React.Component {

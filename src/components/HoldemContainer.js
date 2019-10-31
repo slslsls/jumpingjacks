@@ -6,30 +6,30 @@ import Result from './Result';
 class HoldemContainer extends React.Component {
   state = {
     scenario: ScenarioUtils.getRandomScenario('preFlop', 'Early'),
-    actionHasBeenTaken: false,
+    roundIsOver: false,
     result: ''
   };
 
   getNewScenario = () => {
-    if (this.state.actionHasBeenTaken) {
+    if (this.state.roundIsOver) {
       this.setState({
         scenario: ScenarioUtils.getRandomScenario('preFlop', 'Early'),
-        actionHasBeenTaken: false
+        roundIsOver: false
       });
     }
   }
 
   evaluate = (e, action) => {
-    if (!this.state.actionHasBeenTaken) {
+    if (!this.state.roundIsOver) {
       if (action == this.state.scenario.action) {
         this.setState({
           result: 'Good job!',
-          actionHasBeenTaken: true
+          roundIsOver: true
         });
       } else {
         this.setState({
           result: 'Shit.',
-          actionHasBeenTaken: true
+          roundIsOver: true
         });
       }
     }

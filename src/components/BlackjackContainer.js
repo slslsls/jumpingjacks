@@ -1,9 +1,19 @@
 import React from 'react';
+import { ReactComponent as Card7D } from '../assets/7D.svg';
+import { ReactComponent as Card7S } from '../assets/7S.svg';
 
 class BlackjackContainer extends React.Component {
   render() {
     return (
-      <h1>This is the Blackjack page</h1>
+      <div>
+        <h1>This is the Blackjack page</h1>
+        <div className="user-cards-container">
+          <div className="user-cards">
+            <Card7D className="card back-card"/>
+            <Card7S className="card front-card"/>
+          </div>
+        </div>
+      </div>
     )
   }
 }

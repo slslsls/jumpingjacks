@@ -1,8 +1,8 @@
 // const mocha = require('mocha');
 const { expect } = require('chai');
-const { getRandomScenario } = require('./scenarioUtils');
-const groups = require('../scenarios/groups');
-const preFlop = require('../scenarios/pre-flop');
+const { getScenario } = require('./scenarioUtils');
+const groups = require('../scenarios/holdem/groups');
+const preFlop = require('../scenarios/holdem/pre-flop');
 const _ = require('lodash');
 
 function validateScenario(groupsObject, stageObject, scenario) {
@@ -14,7 +14,7 @@ function validateScenario(groupsObject, stageObject, scenario) {
   expect(potentialCards).to.include(cards);
 }
 
-describe('getRandomScenario', () => {
+describe('getScenario', () => {
 
   const args = [
     { stage: 'preFlop', position: 'Early' },
@@ -26,13 +26,13 @@ describe('getRandomScenario', () => {
 
   _.each(args, a => {
     it(`should return a valid scenario for ${a.stage} stage, ${a.position} position`, () => {
-      let scenario = getRandomScenario(a.stage, a.position);
+      let scenario = getScenario(a.stage, a.position);
       validateScenario(groups, preFlop, scenario);
     });
   });
 
   it('should throw error if stage and position are not specified', () => {
-    expect(getRandomScenario.bind(this)).to.throw();
+    expect(getScenario.bind(this)).to.throw();
   });
 
 });

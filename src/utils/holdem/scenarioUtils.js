@@ -1,11 +1,11 @@
 const _ = require('lodash');
-const groups = require('../scenarios/groups');
-const preFlop = require('../scenarios/pre-flop');
+const groups = require('../scenarios/holdem/groups');
+const preFlop = require('../scenarios/holdem/pre-flop');
 const stages = { // todo: add other stages when the json has been created
   preFlop
 };
 
-function getRandomScenario(stage, position) {
+function getScenario(stage, position) {
   if (!stage || !position) throw Error('stage and position are required arguments');
   let stageObject = stages[stage];
   let action = getValidAction(position, stageObject);
@@ -40,5 +40,5 @@ function randomIntFromInterval(min, max) {
 }
 
 module.exports = {
-  getRandomScenario
+  getScenario
 };

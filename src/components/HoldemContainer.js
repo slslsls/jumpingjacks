@@ -1,11 +1,11 @@
 import React from 'react';
-import ScenarioUtils from '../utils/scenarioUtils';
+import ScenarioUtils from '../utils/holdem/scenarioUtils';
 import Action from './Action';
 import Result from './Result';
 
 class HoldemContainer extends React.Component {
   state = {
-    scenario: ScenarioUtils.getRandomScenario('preFlop', 'Early'),
+    scenario: ScenarioUtils.getScenario('preFlop', 'Early'),
     roundIsOver: false,
     result: ''
   };
@@ -13,7 +13,7 @@ class HoldemContainer extends React.Component {
   getNewScenario = () => {
     if (this.state.roundIsOver) {
       this.setState({
-        scenario: ScenarioUtils.getRandomScenario('preFlop', 'Early'),
+        scenario: ScenarioUtils.getScenario('preFlop', 'Early'),
         roundIsOver: false
       });
     }

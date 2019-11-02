@@ -1,8 +1,7 @@
-// const mocha = require('mocha');
 const { expect } = require('chai');
 const { getScenario } = require('./scenarioUtils');
-const groups = require('../scenarios/holdem/groups');
-const preFlop = require('../scenarios/holdem/pre-flop');
+const groups = require('../../scenarios/holdem/groups');
+const preFlop = require('../../scenarios/holdem/pre-flop');
 const _ = require('lodash');
 
 function validateScenario(groupsObject, stageObject, scenario) {

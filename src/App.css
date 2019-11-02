@@ -27,14 +27,25 @@
   display: inline-block;
 }
 
-.back-card {
+.back-card-holdem {
   right: -100px;
   position: absolute;
   transform: rotate(-3deg);
 }
 
-.front-card {
+.front-card-holdem {
   left: -100px;
   position: absolute;
   transform: rotate(3deg);
+}
+
+.back-card-blackjack {
+  bottom: -420px;
+  right: -85px;
+  position: absolute;
+}
+
+.front-card-blackjack {
+  left: -85px;
+  position: absolute;
 }

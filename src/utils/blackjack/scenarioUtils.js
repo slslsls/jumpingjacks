@@ -1,5 +1,5 @@
 const _ = require('lodash');
-const scenarios = require('../../scenarios/blackjack/blackjack.json');
+const scenarios = require('../../scenarios/blackjack/blackjack');
 
 function getAction(userCards, dealerCard) {
   const scenarioKey = getScenarioKey(userCards);
@@ -10,13 +10,14 @@ function getAction(userCards, dealerCard) {
 }
 
 function getCardRank(card) {
-  if (['J', 'Q', 'K'].includes(card[0])) return 'T';
-  return card[0];
+  if (['T', 'J', 'Q', 'K'].includes(card[0])) return 8;
+  if (card[0] == 'A') return 9;
+  return card[0] - 2;
 }
 
 function checkForQuickDecision(scenarioKey) {
   if (scenarioKey < 9) return 'H';
-  if (['17', 'A8', 'A9', 'TT'].includes(scenarioKey)) return 'S';
+  if (['17', '18', '19', '20', 'A8', 'A9', 'TT'].includes(scenarioKey)) return 'S';
   if (['88', 'AA'].includes(scenarioKey)) return 'P';
   return false;
 }
@@ -32,18 +33,23 @@ function getScenarioKey(cards) {
   } else {
     scenarioKey = total(cards);
   }
-  return convertFaceCardsAndPrioritizeAces(scenarioKey);
+  return convertFaceCardsAndPutAceFirst(scenarioKey);
 }
 
 function convertFaceCardsAndPutAceFirst(scenarioKey) {
-  scenarioKey = scenarioKey.replace('J', 'T');
-  scenarioKey = scenarioKey.replace('Q', 'T');
-  scenarioKey = scenarioKey.replace('K', 'T');
-  let aceIndex = scenarioKey.indexOf('A');
-  if (aceIndex != -1 && aceIndex != 0) {
-    scenarioKey = `${scenarioKey[1]}${scenarioKey[0]}`
+  let newKey = '';
+  for (let i = 0; i < scenarioKey.length; i++) {
+    if (['J', 'Q', 'K'].includes(scenarioKey[i])) {
+      newKey += 'T';
+    } else {
+      newKey += scenarioKey[i]
+    }
   }
-  return scenarioKey;
+  let aceIndex = newKey.indexOf('A');
+  if (aceIndex != -1 && aceIndex != 0) {
+    newKey = `${newKey[1]}${newKey[0]}`
+  }
+  return newKey;
 }
 
 function isPair(cards) {
@@ -51,7 +57,7 @@ function isPair(cards) {
 }
 
 function hasAce(cards) {
-  return (c[0][0] == 'A' || c[1][0] == 'A');
+  return (cards[0][0] == 'A' || cards[1][0] == 'A');
 }
 
 function total(cards) {
@@ -67,3 +73,7 @@ function total(cards) {
   });
   return total.toString();
 }
+
+module.exports = {
+  getAction
+};

@@ -9,8 +9,8 @@ class BlackjackContainer extends React.Component {
         <h1>This is the Blackjack page</h1>
         <div className="user-cards-container">
           <div className="user-cards">
-            <Card7D className="card back-card"/>
-            <Card7S className="card front-card"/>
+            <Card7D className="card back-card-blackjack"/>
+            <Card7S className="card front-card-blackjack"/>
           </div>
         </div>
       </div>

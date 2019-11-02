@@ -1,6 +1,6 @@
 const _ = require('lodash');
-const groups = require('../scenarios/holdem/groups');
-const preFlop = require('../scenarios/holdem/pre-flop');
+const groups = require('../../scenarios/holdem/groups');
+const preFlop = require('../../scenarios/holdem/pre-flop');
 const stages = { // todo: add other stages when the json has been created
   preFlop
 };

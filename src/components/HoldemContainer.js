@@ -21,7 +21,7 @@ class HoldemContainer extends React.Component {
 
   evaluate = (e, action) => {
     if (!this.state.roundIsOver) {
-      if (action == this.state.scenario.action) {
+      if (action === this.state.scenario.action) {
         this.setState({
           result: 'Good job!',
           roundIsOver: true

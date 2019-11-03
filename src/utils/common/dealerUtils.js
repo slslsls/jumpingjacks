@@ -58,7 +58,7 @@ const deck = [<Card2C key="2C"/>, <Card2D key="2D"/>, <Card2H key="2H"/>, <Card2
 
 function getShuffledDeck(game) {
   const shuffledDeck = _.shuffle(deck);
-  if (game == 'blackjack') {
+  if (game === 'blackjack') {
     shuffledDeck[1] = <DownCard key="downcard" />
   }
   return shuffledDeck;

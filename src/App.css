@@ -19,11 +19,19 @@ html, body {
 }
 
 .dealer-line {
-  height: 25em;
-  width: 98.7%;
-  margin-top: -50%;
-  border: 3px solid #C2FBA4;
   border-radius: 100%;
+  position: relative;
+  height: 12em;
+  width: 100%;
+  border-bottom: 3px solid #C2FBA4;
+}
+
+.dealer-line p {
+  font-size: .8em;
+  color: #C2FBA4;
+  position: absolute;
+  bottom: -12px;
+  width:100%;
 }
 
 .card {
@@ -40,8 +48,8 @@ html, body {
 
 .blackjack-user-card-0 {
   position: fixed;
-  top: 40%;
-  left: 35%;
+  top: 45%;
+  left: 39.5%;
 }
 
 .blackjack-user-card-1 {
@@ -52,8 +60,8 @@ html, body {
 
 .blackjack-user-card-2 {
   position: fixed;
-  top: 38%;
-  left: 39.5%;
+  top: 43%;
+  left: 44%;
 }
 
 .blackjack-user-card-3 {
@@ -64,38 +72,56 @@ html, body {
 
 .blackjack-user-card-4 {
   position: fixed;
-  top: 36%;
-  left: 44%;
+  top: 41%;
+  left: 48.5%;
 }
 
 .blackjack-user-card-5 {
   position: fixed;
-  top: 34%;
-  left: 48.5%;
+  top: 39%;
+  left: 53%;
 }
 
 .blackjack-user-card-6 {
   position: fixed;
-  top: 32%;
-  left: 53%;
+  top: 37%;
+  left: 57.5%;
 }
 
 .blackjack-user-card-7 {
   position: fixed;
-  top: 30%;
-  left: 57.5%;
+  top: 35%;
+  left: 62%;
 }
 
 .blackjack-user-card-8 {
   position: fixed;
-  top: 28%;
-  left: 62%;
+  top: 33%;
+  left: 66.5%;
 }
 
 .blackjack-user-card-9 {
   position: fixed;
-  top: 26%;
-  left: 66.5%;
+  top: 31%;
+  left: 71%;
+}
+
+.blackjack-user-card-10 {
+  position: fixed;
+  top: 35%;
+  left: 5%;
+}
+
+.blackjack-user-card-11 {
+  position: fixed;
+  top: 33%;
+  left: 9.5%;
+}
+
+.blackjack-user-card-12 {
+  position: fixed;
+  top: 31%;
+  left: 14%;
 }
 
 .back-card-holdem {

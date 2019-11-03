@@ -1,5 +1,4 @@
 import React from 'react';
-import DownCard from '../assets/downcard.svg';
 import CardWrapper from './CardWrapper';
 import getShuffledDeck from '../utils/common/dealerUtils';
 
@@ -29,15 +28,23 @@ class BlackjackContainer extends React.Component {
       [`card${this.state.currentCardIdx}Status`]: '',
       currentCardIdx: this.state.currentCardIdx + 1
     });
-    console.log(this.state)
+  }
+
+  componentDidMount = () => {
+    setTimeout(this.dealCard, 0);
+    setTimeout(this.dealCard, 300);
+    setTimeout(this.dealCard, 600);
+    setTimeout(this.dealCard, 900);
   }
 
   render() {
     return (
       <div>
-        <CardWrapper classes={`${this.state.card1Status} card blackjack-user-card-1`} card={this.state.cards[1]} />
-        <CardWrapper classes={`${this.state.card3Status} card blackjack-user-card-3`} card={this.state.cards[3]} />
-        <div className="dealer-line" onClick={this.dealCard}></div>
+        <div className="dealer-line" onClick={this.dealCard}>
+          <CardWrapper classes={`${this.state.card1Status} card blackjack-user-card-1`} card={this.state.cards[1]} />
+          <CardWrapper classes={`${this.state.card3Status} card blackjack-user-card-3`} card={this.state.cards[3]} />
+          <p>DEALER</p>
+        </div>
         <CardWrapper classes={`${this.state.card0Status} card blackjack-user-card-0`} card={this.state.cards[0]} />
         <CardWrapper classes={`${this.state.card2Status} card blackjack-user-card-2`} card={this.state.cards[2]} />
         <CardWrapper classes={`${this.state.card4Status} card blackjack-user-card-4`} card={this.state.cards[4]} />
@@ -49,8 +56,6 @@ class BlackjackContainer extends React.Component {
         <CardWrapper classes={`${this.state.card10Status} card blackjack-user-card-10`} card={this.state.cards[10]} />
         <CardWrapper classes={`${this.state.card11Status} card blackjack-user-card-11`} card={this.state.cards[11]} />
         <CardWrapper classes={`${this.state.card12Status} card blackjack-user-card-12`} card={this.state.cards[12]} />
-        <CardWrapper classes={`${this.state.card13Status} card blackjack-user-card-13`} card={this.state.cards[13]} />
-        <CardWrapper classes={`${this.state.card14Status} card blackjack-user-card-14`} card={this.state.cards[14]} />
       </div>
     )
   }

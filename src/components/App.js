@@ -12,19 +12,21 @@ import {
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/holdem">
-          <HoldemContainer />
-        </Route>
-        <Route path="/blackjack">
-          <BlackjackContainer />
-        </Route>
-        <Route>
-          <Redirect to="/blackjack"/>
-        </Route>
-      </Switch>
-    </Router>
+    <div className="outer-container">
+      <Router>
+        <Switch>
+          <Route path="/holdem">
+            <HoldemContainer />
+          </Route>
+          <Route path="/blackjack">
+            <BlackjackContainer />
+          </Route>
+          <Route>
+            <Redirect to="/blackjack"/>
+          </Route>
+        </Switch>
+      </Router>
+    </div>
   );
 }
 

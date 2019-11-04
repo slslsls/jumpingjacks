@@ -6,12 +6,13 @@ function getAction(userCards, dealerCard) {
   const dealerCardRank = getCardRank(dealerCard);
   const quickDecision = checkForQuickDecision(scenarioKey);
   if (quickDecision) return quickDecision;
+  console.log(scenarioKey)
   return scenarios[scenarioKey][dealerCardRank];
 }
 
 function getCardRank(card) {
   if (['T', 'J', 'Q', 'K'].includes(card[0])) return 8;
-  if (card[0] == 'A') return 9;
+  if (card[0] === 'A') return 9;
   return card[0] - 2;
 }
 
@@ -24,7 +25,7 @@ function checkForQuickDecision(scenarioKey) {
 
 function getScenarioKey(cards) {
   let scenarioKey = '';
-  if (cards.length == 2) {
+  if (cards.length === 2) {
     if (isPair(cards) || hasAce(cards)) {
       scenarioKey = `${cards[0][0]}${cards[1][0]}`;
     } else {
@@ -46,18 +47,18 @@ function convertFaceCardsAndPutAceFirst(scenarioKey) {
     }
   }
   let aceIndex = newKey.indexOf('A');
-  if (aceIndex != -1 && aceIndex != 0) {
+  if (aceIndex !== -1 && aceIndex !== 0) {
     newKey = `${newKey[1]}${newKey[0]}`
   }
   return newKey;
 }
 
 function isPair(cards) {
-  return cards[0][0] == cards[1][0];
+  return cards[0][0] === cards[1][0];
 }
 
 function hasAce(cards) {
-  return (cards[0][0] == 'A' || cards[1][0] == 'A');
+  return (cards[0][0] === 'A' || cards[1][0] === 'A');
 }
 
 function total(cards) {
@@ -65,7 +66,7 @@ function total(cards) {
   _.each(cards, c => {
     if (['T', 'J', 'Q', 'K'].includes(c[0])) {
       total += 10;
-    } else if (c[0] == 'A') {
+    } else if (c[0] === 'A') {
       total += 1;
     } else {
       total += parseInt(c[0]);

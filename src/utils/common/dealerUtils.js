@@ -1,5 +1,4 @@
 import React from 'react';
-import { ReactComponent as DownCard } from '../../assets/downcard.svg';
 import { ReactComponent as Card2C } from '../../assets/2C.svg';
 import { ReactComponent as Card2D } from '../../assets/2D.svg';
 import { ReactComponent as Card2H } from '../../assets/2H.svg';
@@ -54,15 +53,25 @@ import { ReactComponent as CardAH } from '../../assets/AH.svg';
 import { ReactComponent as CardAS } from '../../assets/AS.svg';
 
 const _ = require('lodash');
-const deck = [{ component: <Card2C key="2C"/>, cardId: "2C"}, { component: <Card2D key="2D"/>, cardId: "2D"}, { component: <Card2H key="2H"/>, cardId: "2H"}, { component: <Card2S key="2S"/>, cardId: "2S"}, { component: <Card3C key="3C"/>, cardId: "3C"}, { component: <Card3D key="3D"/>, cardId: "3D"}, { component: <Card3H key="3H"/>, cardId: "3H"}, { component: <Card3S key="3S"/>, cardId: "3S"}, { component: <Card4C key="4C"/>, cardId: "4C"}, { component: <Card4D key="4D"/>, cardId: "4D"}, { component: <Card4H key="4H"/>, cardId: "4H"}, { component: <Card4S key="4S"/>, cardId: "4S"}, { component: <Card5C key="5C"/>, cardId: "5C"}, { component: <Card5D key="5D"/>, cardId: "5D"}, { component: <Card5H key="5H"/>, cardId: "5H"}, { component: <Card5S key="5S"/>, cardId: "5S"}, { component: <Card6C key="6C"/>, cardId: "6C"}, { component: <Card6D key="6D"/>, cardId: "6D"}, { component: <Card6H key="6H"/>, cardId: "6H"}, { component: <Card6S key="6S"/>, cardId: "6S"}, { component: <Card7C key="7C"/>, cardId: "7C"}, { component: <Card7D key="7D"/>, cardId: "7D"}, { component: <Card7H key="7H"/>, cardId: "7H"}, { component: <Card7S key="7S"/>, cardId: "7S"}, { component: <Card8C key="8C"/>, cardId: "8C"}, { component: <Card8D key="8D"/>, cardId: "8D"}, { component: <Card8H key="8H"/>, cardId: "8H"}, { component: <Card8S key="8S"/>, cardId: "8S"}, { component: <Card9C key="9C"/>, cardId: "9C"}, { component: <Card9D key="9D"/>, cardId: "9D"}, { component: <Card9H key="9H"/>, cardId: "9H"}, { component: <Card9S key="9S"/>, cardId: "9S"}, { component: <CardTC key="TC"/>, cardId: "TC"}, { component: <CardTD key="TD"/>, cardId: "TD"}, { component: <CardTH key="TH"/>, cardId: "TH"}, { component: <CardTS key="TS"/>, cardId: "TS"}, { component: <CardJC key="JC"/>, cardId: "JC"}, { component: <CardJD key="JD"/>, cardId: "JD"}, { component: <CardJH key="JH"/>, cardId: "JH"}, { component: <CardJS key="JS"/>, cardId: "JS"}, { component: <CardQC key="QC"/>, cardId: "QC"}, { component: <CardQD key="QD"/>, cardId: "QD"}, { component: <CardQH key="QH"/>, cardId: "QH"}, { component: <CardQS key="QS"/>, cardId: "QS"}, { component: <CardKC key="KC"/>, cardId: "KC"}, { component: <CardKD key="KD"/>, cardId: "KD"}, { component: <CardKH key="KH"/>, cardId: "KH"}, { component: <CardKS key="KS"/>, cardId: "KS"}, { component: <CardAC key="AC"/>, cardId: "AC"}, { component: <CardAD key="AD"/>, cardId: "AD"}, { component: <CardAH key="AH"/>, cardId: "AH"}, { component: <CardAS key="AS"/>, cardId: "AS"}];
+const deck = [{ component: <Card2C />, cardId: "2C"}, { component: <Card2D />, cardId: "2D"}, { component: <Card2H />, cardId: "2H"}, { component: <Card2S />, cardId: "2S"}, { component: <Card3C />, cardId: "3C"}, { component: <Card3D />, cardId: "3D"}, { component: <Card3H />, cardId: "3H"}, { component: <Card3S />, cardId: "3S"}, { component: <Card4C />, cardId: "4C"}, { component: <Card4D />, cardId: "4D"}, { component: <Card4H />, cardId: "4H"}, { component: <Card4S />, cardId: "4S"}, { component: <Card5C />, cardId: "5C"}, { component: <Card5D />, cardId: "5D"}, { component: <Card5H />, cardId: "5H"}, { component: <Card5S />, cardId: "5S"}, { component: <Card6C />, cardId: "6C"}, { component: <Card6D />, cardId: "6D"}, { component: <Card6H />, cardId: "6H"}, { component: <Card6S />, cardId: "6S"}, { component: <Card7C />, cardId: "7C"}, { component: <Card7D />, cardId: "7D"}, { component: <Card7H />, cardId: "7H"}, { component: <Card7S />, cardId: "7S"}, { component: <Card8C />, cardId: "8C"}, { component: <Card8D />, cardId: "8D"}, { component: <Card8H />, cardId: "8H"}, { component: <Card8S />, cardId: "8S"}, { component: <Card9C />, cardId: "9C"}, { component: <Card9D />, cardId: "9D"}, { component: <Card9H />, cardId: "9H"}, { component: <Card9S />, cardId: "9S"}, { component: <CardTC />, cardId: "TC"}, { component: <CardTD />, cardId: "TD"}, { component: <CardTH />, cardId: "TH"}, { component: <CardTS />, cardId: "TS"}, { component: <CardJC />, cardId: "JC"}, { component: <CardJD />, cardId: "JD"}, { component: <CardJH />, cardId: "JH"}, { component: <CardJS />, cardId: "JS"}, { component: <CardQC />, cardId: "QC"}, { component: <CardQD />, cardId: "QD"}, { component: <CardQH />, cardId: "QH"}, { component: <CardQS />, cardId: "QS"}, { component: <CardKC />, cardId: "KC"}, { component: <CardKD />, cardId: "KD"}, { component: <CardKH />, cardId: "KH"}, { component: <CardKS />, cardId: "KS"}, { component: <CardAC />, cardId: "AC"}, { component: <CardAD />, cardId: "AD"}, { component: <CardAH />, cardId: "AH"}, { component: <CardAS />, cardId: "AS"}];
 
 function getShuffledDeck(game) {
-  const shuffledDeck = _.shuffle(deck);
+  let shuffledDeck = _.shuffle(deck);
   if (game === 'blackjack') {
-    while ()
-    shuffledDeck[1] = { component: <DownCard key="downcard" />, cardId: "DownCard" };
+    while (willGiveUser21(shuffledDeck)) {
+      shuffledDeck = _.shuffle(shuffledDeck);
+    }
   }
   return shuffledDeck;
+}
+
+function willGiveUser21(cards) {
+  // todo: this logic isn't working
+  const tenValueCards = ['T', 'J', 'Q', 'K'];
+  return (
+    (tenValueCards.includes(cards[1][0]) && cards[2][0] === 'A') ||
+    (tenValueCards.includes(cards[2][0]) && cards[1][0] === 'A')
+  );
 }
 
 export default getShuffledDeck;

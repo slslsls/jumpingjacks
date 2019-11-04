@@ -17,9 +17,9 @@ function getCardRank(card) {
 }
 
 function checkForQuickDecision(scenarioKey) {
-  if (scenarioKey < 9) return 'H';
-  if (['17', '18', '19', '20', 'A8', 'A9', 'TT'].includes(scenarioKey)) return 'S';
-  if (['88', 'AA'].includes(scenarioKey)) return 'P';
+  if (scenarioKey < 9) return 'Hit';
+  if (['17', '18', '19', '20', 'A8', 'A9', 'TT'].includes(scenarioKey)) return 'Stay';
+  if (['88', 'AA'].includes(scenarioKey)) return 'Split';
   return false;
 }
 

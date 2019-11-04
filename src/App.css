@@ -9,121 +9,73 @@ html, body {
 }
 
 .action-button {
-  width: 75px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  width: 77px;
+  padding-top: 11px;
+  padding-bottom: 11px;
   margin: 5px;
   display: inline-block;
   border-radius: 5px;
-  background-color: #64A0E5;
+  /* background-color: #76DC9B; */
+  background-color: #70B7E8;
   color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.blackjack-dealer-cards-container {
+  margin: auto;
+  top: 20px;
+  position: relative;
+  height: 14.5em;
+  width: 65%;
+  border: 3px solid #F9D160;
+}
+
+.blackjack-dealer-cards-container p {
+  font-size: .8em;
+  color: #F9D160;
+  position: absolute;
+  bottom: -12px;
+  width: 100%;
   font-weight: bold;
 }
 
-.dealer-line {
-  border-radius: 100%;
-  position: relative;
-  height: 12em;
-  width: 100%;
-  border-bottom: 3px solid #C2FBA4;
-}
-
-.dealer-line p {
-  font-size: .8em;
-  color: #C2FBA4;
-  position: absolute;
-  bottom: -12px;
-  width:100%;
+.cards-invisible {
+  opacity: 0;
 }
 
 .card {
-  /* height: 1.68in;
-  width: 1.2in; */
-  height: 1.4in;
-  width: 1in;
-  -webkit-transition:all .3s ease;
-       -moz-transition:all .2s ease;
-        -ms-transition:all .2s ease;
-         -o-transition:all .2s ease;
-            transition:all .2s ease;
+  height: 1.68in;
+  width: 1.2in;
+  -webkit-transition:all .5s ease;
+       -moz-transition:all .5s ease;
+        -ms-transition:all .5s ease;
+         -o-transition:all .5s ease;
+            transition:all .5s ease;
 }
 
-.blackjack-user-card-0 {
+.blackjack-dealer-downcard {
+  position: fixed;
+  top: 5%;
+  right: 30%;
+}
+
+.blackjack-dealer-upcard {
+  position: fixed;
+  top: 9%;
+  left: 30%;
+}
+
+.blackjack-user-backcard {
   position: fixed;
   top: 45%;
-  left: 39.5%;
+  left: 30%;
 }
 
-.blackjack-user-card-1 {
-  position: fixed;
-  top: 2%;
-  left: 39.5%;
-}
-
-.blackjack-user-card-2 {
-  position: fixed;
-  top: 43%;
-  left: 44%;
-}
-
-.blackjack-user-card-3 {
-  position: fixed;
-  top: 4%;
-  left: 35%;
-}
-
-.blackjack-user-card-4 {
+.blackjack-user-frontcard {
   position: fixed;
   top: 41%;
-  left: 48.5%;
-}
-
-.blackjack-user-card-5 {
-  position: fixed;
-  top: 39%;
-  left: 53%;
-}
-
-.blackjack-user-card-6 {
-  position: fixed;
-  top: 37%;
-  left: 57.5%;
-}
-
-.blackjack-user-card-7 {
-  position: fixed;
-  top: 35%;
-  left: 62%;
-}
-
-.blackjack-user-card-8 {
-  position: fixed;
-  top: 33%;
-  left: 66.5%;
-}
-
-.blackjack-user-card-9 {
-  position: fixed;
-  top: 31%;
-  left: 71%;
-}
-
-.blackjack-user-card-10 {
-  position: fixed;
-  top: 35%;
-  left: 5%;
-}
-
-.blackjack-user-card-11 {
-  position: fixed;
-  top: 33%;
-  left: 9.5%;
-}
-
-.blackjack-user-card-12 {
-  position: fixed;
-  top: 31%;
-  left: 14%;
+  right: 30%;
 }
 
 .back-card-holdem {
@@ -136,10 +88,6 @@ html, body {
   left: -100px;
   position: absolute;
   transform: rotate(3deg);
-}
-
-.undealt {
-  top: -50%;
 }
 
 .blackjack-user-cards-container {

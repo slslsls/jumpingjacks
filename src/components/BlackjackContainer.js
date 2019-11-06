@@ -73,7 +73,7 @@ class BlackjackContainer extends React.Component {
         cardsDealtStage: 'cards-discarded',
       });
       setTimeout(this.resetState, 200);
-      setTimeout(this.deal, 300);
+      setTimeout(this.deal, 400);
     }
   }
 

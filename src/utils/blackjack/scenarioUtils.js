@@ -6,7 +6,6 @@ function getAction(userCards, dealerCard) {
   const dealerCardRank = getCardRank(dealerCard);
   const quickDecision = checkForQuickDecision(scenarioKey);
   if (quickDecision) return quickDecision;
-  console.log(scenarioKey)
   return scenarios[scenarioKey][dealerCardRank];
 }
 

@@ -27,11 +27,6 @@ class BlackjackContainer extends React.Component {
 
   evaluate = (action) => {
     return () => {
-      if (action === this.state.correctAction) {
-        console.log('Great!')
-      } else {
-        console.log('Shit.')
-      }
       this.setState({
         evaluated: true,
         selectedAction: action

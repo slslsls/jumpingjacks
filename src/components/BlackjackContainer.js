@@ -1,5 +1,4 @@
 import React from 'react';
-import Action from './Action';
 import { ReactComponent as DownCard } from '../assets/downcard.svg';
 import getShuffledDeck from '../utils/common/dealerUtils';
 import { getAction } from '../utils/blackjack/scenarioUtils';
@@ -7,55 +6,102 @@ import { getAction } from '../utils/blackjack/scenarioUtils';
 class BlackjackContainer extends React.Component {
   state = {
     cards: getShuffledDeck('blackjack'),
-    cardsInvisible: true
+    cardsDealtStage: 'cards-pre-deal'
   };
 
   componentDidMount = () => {
     this.setState({
       dealerCard: this.state.cards[0].cardId,
       userCards: [this.state.cards[1].cardId, this.state.cards[2].cardId],
-      action: getAction([this.state.cards[1].cardId, this.state.cards[2].cardId], this.state.cards[0].cardId)
+      evaluated: false,
+      correctAction: getAction([this.state.cards[1].cardId, this.state.cards[2].cardId], this.state.cards[0].cardId),
+      selectedAction: null
     });
     setTimeout(() => {
       this.setState({
-        cardsInvisible: false,
+        cardsDealtStage: 'cards-dealt',
       });
     }, 1);
   }
 
-  evaluate = (e, action) => {
-    if (action === this.state.action) {
-      console.log('Great!')
-    } else {
-      console.log('Shit.')
+  evaluate = (action) => {
+    return () => {
+      if (action === this.state.correctAction) {
+        console.log('Great!')
+      } else {
+        console.log('Shit.')
+      }
+      this.setState({
+        evaluated: true,
+        selectedAction: action
+      });
+    }
+  }
+
+  getEvaluatedColor = (action) => {
+    if (this.state.evaluated) {
+      if (action === this.state.correctAction) return 'evaluated-correct';
+      if (action === this.state.selectedAction) return 'evaluated-incorrect';
+      return 'evaluated-nothing';
+    }
+  }
+
+  dealAgain = () => {
+    if (this.state.evaluated) {
+      this.setState({
+        cardsDealtStage: 'cards-discarded',
+      });
+      setTimeout(this.setState({
+        cards: getShuffledDeck('blackjack'),
+        cardsDealtStage: 'cards-pre-deal',
+        dealerCard: this.state.cards[0].cardId,
+        userCards: [this.state.cards[1].cardId, this.state.cards[2].cardId],
+        evaluated: false,
+        correctAction: getAction([this.state.cards[1].cardId, this.state.cards[2].cardId], this.state.cards[0].cardId),
+        selectedAction: null
+      }), 700);
+      setTimeout(this.setState({
+        cardsDealtStage: 'cards-dealt'
+      }), 701);
     }
   }
 
   render() {
     return (
-      <div>
+      <div onClick={this.dealAgain}>
         <div className="blackjack-dealer-cards-container">
-          <div className={`${this.state.cardsInvisible ? "cards-invisible" : ""} card blackjack-dealer-downcard`}>
+          <div className={`${this.state.cardsDealtStage} card blackjack-dealer-downcard`}>
             <DownCard />
           </div>
-          <div className={`${this.state.cardsInvisible ? "cards-invisible" : ""} card blackjack-dealer-upcard`}>
+          <div className={`${this.state.cardsDealtStage} card blackjack-dealer-upcard`}>
             {this.state.cards[0].component}
           </div>
           <p>DEALER</p>
         </div>
         <div className="blackjack-user-cards-container">
-          <div className={`${this.state.cardsInvisible ? "cards-invisible" : ""} card blackjack-user-backcard`}>
+          <div className={`${this.state.cardsDealtStage} card blackjack-user-backcard`}>
             {this.state.cards[1].component}
           </div>
-          <div className={`${this.state.cardsInvisible ? "cards-invisible" : ""} card blackjack-user-frontcard`}>
+          <div className={`${this.state.cardsDealtStage} card blackjack-user-frontcard`}>
             {this.state.cards[2].component}
           </div>
         </div>
         <div className="blackjack-actions-container">
-          <Action name="Hit" clickHandler={this.evaluate} />
-          <Action name="Stay" clickHandler={this.evaluate} />
-          <Action name="Split" clickHandler={this.evaluate} />
-          <Action name="DD" clickHandler={this.evaluate} />
+          <div className={`${this.getEvaluatedColor('Hit')} action-button`} onClick={this.evaluate('Hit')}>
+            Hit
+          </div>
+          <div className={`${this.getEvaluatedColor('Stay')} action-button`} onClick={this.evaluate('Stay')}>
+            Stay
+          </div>
+          <div className={`${this.getEvaluatedColor('Split')} action-button`} onClick={this.evaluate('Split')}>
+            Split
+          </div>
+          <div className={`${this.getEvaluatedColor('DD')} action-button`} onClick={this.evaluate('DD')}>
+            DD
+          </div>
+        </div>
+        <div className={`${!this.state.evaluated ? 'invisible' : ''} deal-again`}>
+          Tap anywhere to deal again!
         </div>
       </div>
     )

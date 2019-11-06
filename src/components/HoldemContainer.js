@@ -1,6 +1,5 @@
 import React from 'react';
 import ScenarioUtils from '../utils/holdem/scenarioUtils';
-import Action from './Action';
 import Result from './Result';
 
 class HoldemContainer extends React.Component {
@@ -43,10 +42,18 @@ class HoldemContainer extends React.Component {
         <p>{this.state.scenario.leadUp}</p>
         <p>{this.state.scenario.cards}</p>
         <p>(The correct answer is "{this.state.scenario.action}")</p>
-        <Action name="Raise" clickHandler={this.evaluate} />
-        <Action name="Call" clickHandler={this.evaluate} />
-        <Action name="Check" clickHandler={this.evaluate} />
-        <Action name="Fold" clickHandler={this.evaluate} />
+        <div className="action-button" onClick={this.evaluate('Raise')}>
+          Raise
+        </div>
+        <div className="action-button" onClick={this.evaluate('Call')}>
+          Call
+        </div>
+        <div className="action-button" onClick={this.evaluate('Check')}>
+          Check
+        </div>
+        <div className="action-button" onClick={this.evaluate('Fold')}>
+          Fold
+        </div>
         <Result value={this.state.result} />
       </div>
     )

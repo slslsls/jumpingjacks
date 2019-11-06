@@ -46,23 +46,31 @@ class BlackjackContainer extends React.Component {
     }
   }
 
+  resetState = () => {
+    this.setState({
+      cards: getShuffledDeck('blackjack'),
+      cardsDealtStage: 'cards-pre-deal',
+      dealerCard: this.state.cards[0].cardId,
+      userCards: [this.state.cards[1].cardId, this.state.cards[2].cardId],
+      evaluated: false,
+      correctAction: getAction([this.state.cards[1].cardId, this.state.cards[2].cardId], this.state.cards[0].cardId),
+      selectedAction: null
+    });
+  }
+
+  deal = () => {
+    this.setState({
+      cardsDealtStage: 'cards-dealt'
+    });
+  }
+
   dealAgain = () => {
     if (this.state.evaluated) {
       this.setState({
         cardsDealtStage: 'cards-discarded',
       });
-      setTimeout(this.setState({
-        cards: getShuffledDeck('blackjack'),
-        cardsDealtStage: 'cards-pre-deal',
-        dealerCard: this.state.cards[0].cardId,
-        userCards: [this.state.cards[1].cardId, this.state.cards[2].cardId],
-        evaluated: false,
-        correctAction: getAction([this.state.cards[1].cardId, this.state.cards[2].cardId], this.state.cards[0].cardId),
-        selectedAction: null
-      }), 700);
-      setTimeout(this.setState({
-        cardsDealtStage: 'cards-dealt'
-      }), 701);
+      setTimeout(this.resetState, 500);
+      setTimeout(this.deal, 1000);
     }
   }
 

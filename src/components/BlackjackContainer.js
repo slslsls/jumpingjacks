@@ -6,7 +6,8 @@ import { getAction } from '../utils/blackjack/scenarioUtils';
 class BlackjackContainer extends React.Component {
   state = {
     cards: getShuffledDeck('blackjack'),
-    cardsDealtStage: 'cards-pre-deal'
+    cardsDealtStage: 'cards-pre-deal',
+    instantTransition: false
   };
 
   componentDidMount = () => {
@@ -54,13 +55,15 @@ class BlackjackContainer extends React.Component {
       userCards: [this.state.cards[1].cardId, this.state.cards[2].cardId],
       evaluated: false,
       correctAction: getAction([this.state.cards[1].cardId, this.state.cards[2].cardId], this.state.cards[0].cardId),
-      selectedAction: null
+      selectedAction: null,
+      instantTransition: true
     });
   }
 
   deal = () => {
     this.setState({
-      cardsDealtStage: 'cards-dealt'
+      cardsDealtStage: 'cards-dealt',
+      instantTransition: false
     });
   }
 
@@ -69,8 +72,8 @@ class BlackjackContainer extends React.Component {
       this.setState({
         cardsDealtStage: 'cards-discarded',
       });
-      setTimeout(this.resetState, 500);
-      setTimeout(this.deal, 1000);
+      setTimeout(this.resetState, 200);
+      setTimeout(this.deal, 300);
     }
   }
 
@@ -78,19 +81,19 @@ class BlackjackContainer extends React.Component {
     return (
       <div onClick={this.dealAgain}>
         <div className="blackjack-dealer-cards-container">
-          <div className={`${this.state.cardsDealtStage} card blackjack-dealer-downcard`}>
+          <div className={`${this.state.cardsDealtStage} ${this.state.instantTransition ? 'instant-transition' : ''} card blackjack-dealer-downcard`}>
             <DownCard />
           </div>
-          <div className={`${this.state.cardsDealtStage} card blackjack-dealer-upcard`}>
+          <div className={`${this.state.cardsDealtStage} ${this.state.instantTransition ? 'instant-transition' : ''} card blackjack-dealer-upcard`}>
             {this.state.cards[0].component}
           </div>
           <p>DEALER</p>
         </div>
         <div className="blackjack-user-cards-container">
-          <div className={`${this.state.cardsDealtStage} card blackjack-user-backcard`}>
+          <div className={`${this.state.cardsDealtStage} ${this.state.instantTransition ? 'instant-transition' : ''} card blackjack-user-backcard`}>
             {this.state.cards[1].component}
           </div>
-          <div className={`${this.state.cardsDealtStage} card blackjack-user-frontcard`}>
+          <div className={`${this.state.cardsDealtStage} ${this.state.instantTransition ? 'instant-transition' : ''} card blackjack-user-frontcard`}>
             {this.state.cards[2].component}
           </div>
         </div>

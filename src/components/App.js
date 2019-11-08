@@ -8,6 +8,7 @@ import {
   Link,
   Redirect
 } from "react-router-dom";
+import './App.css';
 
 function App() {
   return (
@@ -25,6 +26,11 @@ function App() {
           </Route>
         </Switch>
       </Router>
+      <div className="hamburger">
+        <div className="hamburger-line"></div>
+        <div className="hamburger-line"></div>
+        <div className="hamburger-line"></div>
+      </div>
     </div>
   );
 }

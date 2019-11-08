@@ -1,0 +1,16 @@
+.hamburger {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  width: 55px;
+}
+
+.hamburger-line {
+  height: 4px;
+  width: 75%;
+  border: 1px solid lightgray;
+  background-color: lightgray;
+  border-radius: 20px;
+  margin-top: 6px;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import { ReactComponent as DownCard } from '../assets/downcard.svg';
 import getShuffledDeck from '../utils/common/dealerUtils';
 import { getAction } from '../utils/blackjack/scenarioUtils';
+import './BlackjackContainer.css';
 
 class BlackjackContainer extends React.Component {
   state = {
@@ -55,7 +56,6 @@ class BlackjackContainer extends React.Component {
       userCards: [this.state.cards[1].cardId, this.state.cards[2].cardId],
       correctAction: getAction([this.state.cards[1].cardId, this.state.cards[2].cardId], this.state.cards[0].cardId)
     });
-    console.log(this.state.correctAction)
   }
 
   deal = () => {
@@ -78,24 +78,25 @@ class BlackjackContainer extends React.Component {
   render() {
     return (
       <div onClick={this.dealAgain}>
-        <div className="blackjack-dealer-cards-container">
-          <div className={`${this.state.cardsDealtStage} ${this.state.instantTransition ? 'instant-transition' : ''} card blackjack-dealer-downcard`}>
+        <div className="ad"></div>
+        <div className="dealer-cards-container">
+          <div className={`${this.state.cardsDealtStage} ${this.state.instantTransition ? 'instant-transition' : ''} card dealer-downcard`}>
             <DownCard />
           </div>
-          <div className={`${this.state.cardsDealtStage} ${this.state.instantTransition ? 'instant-transition' : ''} card blackjack-dealer-upcard`}>
+          <div className={`${this.state.cardsDealtStage} ${this.state.instantTransition ? 'instant-transition' : ''} card dealer-upcard`}>
             {this.state.cards[0].component}
           </div>
           <p>DEALER</p>
         </div>
-        <div className="blackjack-user-cards-container">
-          <div className={`${this.state.cardsDealtStage} ${this.state.instantTransition ? 'instant-transition' : ''} card blackjack-user-backcard`}>
+        <div className="user-cards-container">
+          <div className={`${this.state.cardsDealtStage} ${this.state.instantTransition ? 'instant-transition' : ''} card user-backcard`}>
             {this.state.cards[1].component}
           </div>
-          <div className={`${this.state.cardsDealtStage} ${this.state.instantTransition ? 'instant-transition' : ''} card blackjack-user-frontcard`}>
+          <div className={`${this.state.cardsDealtStage} ${this.state.instantTransition ? 'instant-transition' : ''} card user-frontcard`}>
             {this.state.cards[2].component}
           </div>
         </div>
-        <div className="blackjack-actions-container">
+        <div className="actions-container">
           <div className={`${this.getEvaluatedColor('Hit')} action-button`} onClick={this.evaluate('Hit')}>
             Hit
           </div>

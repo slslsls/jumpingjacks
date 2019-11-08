@@ -39,16 +39,16 @@ html, body {
   background-color: lightgray;
 }
 
-.blackjack-dealer-cards-container {
+.dealer-cards-container {
   margin: auto;
-  top: 80px;
+  top: 10px;
   position: relative;
   height: 14.5em;
   width: 65%;
   border: 3px solid #F9D160;
 }
 
-.blackjack-dealer-cards-container p {
+.dealer-cards-container p {
   font-size: .8em;
   color: #F9D160;
   position: absolute;
@@ -70,9 +70,9 @@ html, body {
   width: 1.2in;
 }
 
-.blackjack-dealer-downcard {
+.dealer-downcard {
   position: fixed;
-  top: 13.5%;
+  top: 17.5%;
   left: 42%;
   -webkit-transition:all .4s ease;
      -moz-transition:all .4s ease;
@@ -81,9 +81,9 @@ html, body {
           transition:all .4s ease;
 }
 
-.blackjack-dealer-upcard {
+.dealer-upcard {
   position: fixed;
-  top: 17.5%;
+  top: 21.5%;
   left: 30%;
   -webkit-transition:all .7s ease;
      -moz-transition:all .7s ease;
@@ -92,9 +92,9 @@ html, body {
           transition:all .7s ease;
 }
 
-.blackjack-user-backcard {
+.user-backcard {
   position: fixed;
-  top: 55%;
+  top: 56%;
   left: 30%;
   -webkit-transition:all .2s ease;
      -moz-transition:all .2s ease;
@@ -103,9 +103,9 @@ html, body {
           transition:all .2s ease;
 }
 
-.blackjack-user-frontcard {
+.user-frontcard {
   position: fixed;
-  top: 51%;
+  top: 52%;
   left: 42%;
   -webkit-transition:all .5s ease;
      -moz-transition:all .5s ease;
@@ -134,12 +134,12 @@ html, body {
   transform: rotate(3deg);
 }
 
-.blackjack-user-cards-container {
+.user-cards-container {
   width: 100%;
-  height: 380px;
+  height: 270px;
 }
 
-.blackjack-actions-container {
+.actions-container {
   width: 100%;
   height: 50px;
 }
@@ -156,4 +156,11 @@ html, body {
       -ms-transition:all 1.5s ease;
        -o-transition:all 1.5s ease;
           transition:all 1.5s ease;
+}
+
+.ad {
+  width: 320px;
+  height: 100px;
+  background-color: blue;
+  margin: auto;
 }

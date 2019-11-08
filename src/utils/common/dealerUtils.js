@@ -66,7 +66,6 @@ function getShuffledDeck(game) {
 }
 
 function willGiveUser21(cards) {
-  // todo: this logic isn't working
   const tenValueCards = ['T', 'J', 'Q', 'K'];
   return (
     (tenValueCards.includes(cards[1].cardId[0]) && cards[2].cardId[0] === 'A') ||

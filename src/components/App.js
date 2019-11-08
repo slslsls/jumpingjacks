@@ -1,5 +1,4 @@
 import React from 'react';
-import '../App.css';
 import HoldemContainer from './HoldemContainer';
 import BlackjackContainer from './BlackjackContainer';
 import {
@@ -12,7 +11,7 @@ import {
 
 function App() {
   return (
-    <div className="outer-container">
+    <div>
       <Router>
         <Switch>
           <Route path="/holdem">

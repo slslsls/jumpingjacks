@@ -1,5 +1,6 @@
 * {
   text-align: center;
+  /* font-family: "Avenir Next", "Avenir", sans-serif; */
 }
 
 html, body {
@@ -161,5 +162,4 @@ html, body {
   width: 320px;
   height: 100px;
   background-color: blue;
-  margin: auto;
 }

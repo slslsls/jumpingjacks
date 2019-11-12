@@ -1,4 +1,5 @@
 import React from 'react';
+import Home from './Home';
 import HoldemContainer from './HoldemContainer';
 import BlackjackContainer from './BlackjackContainer';
 import {
@@ -8,7 +9,6 @@ import {
   Link,
   Redirect
 } from "react-router-dom";
-import './App.css';
 
 function App() {
   return (
@@ -21,16 +21,14 @@ function App() {
           <Route path="/blackjack">
             <BlackjackContainer />
           </Route>
+          <Route path="/">
+            <Home />
+          </Route>
           <Route>
-            <Redirect to="/blackjack"/>
+            <Redirect to="/"/>
           </Route>
         </Switch>
       </Router>
-      <div className="hamburger">
-        <div className="hamburger-line"></div>
-        <div className="hamburger-line"></div>
-        <div className="hamburger-line"></div>
-      </div>
     </div>
   );
 }

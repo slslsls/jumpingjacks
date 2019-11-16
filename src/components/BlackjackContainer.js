@@ -1,8 +1,12 @@
 import React from 'react';
 import { ReactComponent as DownCard } from '../assets/downcard.svg';
+import { ReactComponent as HomeButton } from '../assets/homebutton.svg';
 import getShuffledDeck from '../utils/common/dealerUtils';
 import { getAction } from '../utils/blackjack/scenarioUtils';
 import './BlackjackContainer.css';
+import {
+  Link
+} from "react-router-dom";
 
 class BlackjackContainer extends React.Component {
   state = {
@@ -38,7 +42,12 @@ class BlackjackContainer extends React.Component {
         });
         if (action === this.state.correctAction) {
           this.setState({
-            correctAnswers: this.state.correctAnswers + 1
+            correctAnswers: this.state.correctAnswers + 1,
+            evaluation: 'evaluation-message-correct'
+          });
+        } else {
+          this.setState({
+            evaluation: 'evaluation-message-incorrect'
           });
         }
       }
@@ -93,6 +102,9 @@ class BlackjackContainer extends React.Component {
     return (
       <div onClick={this.dealAgain}>
         <div className="ad"></div>
+        <Link to="/" className="home-button-container">
+          <HomeButton className="home-button" />
+        </Link>
         <div className="dealer-cards-container">
           <div className={`${this.state.cardsDealtStage} ${this.state.instantTransition ? 'instant-transition' : ''} card dealer-downcard`}>
             <DownCard />
@@ -125,7 +137,11 @@ class BlackjackContainer extends React.Component {
           </div>
         </div>
         <div className={`${!this.state.evaluated ? 'invisible' : ''} deal-again`}>
-          {this.getScore()} Tap anywhere to deal again!
+          <span className={
+            `${this.state.evaluated ? '' : 'invisible' }
+            ${this.state.evaluation}
+            deal-again`
+          }>{this.getScore()}</span> Tap anywhere to deal again!
         </div>
       </div>
     )

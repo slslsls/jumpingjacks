@@ -150,7 +150,7 @@ html, body {
 
 .deal-again {
   color: gray;
-  margin-top: 5px;
+  margin-top: 10px;
   -webkit-transition:all 1s ease;
      -moz-transition:all 1s ease;
       -ms-transition:all 1s ease;
@@ -159,7 +159,30 @@ html, body {
 }
 
 .ad {
+  margin-left: 0;
   width: 320px;
   height: 100px;
   background-color: blue;
+}
+
+.home-button {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  height: 40px;
+  width: 40px;
+}
+
+.home-button-container {
+  margin-top: 100px;
+}
+
+.evaluation-message-correct {
+  font-weight: bold;
+  color: #00a47f;
+}
+
+.evaluation-message-incorrect {
+  font-weight: bold;
+  color: red;
 }

@@ -20,12 +20,12 @@ class Home extends React.Component {
       <div>
         <div className={`${this.state.display ? '' : 'invisible'} home-background`}>
           <div className="home-frame">
-            <div className="nav-button">
-              <Link to="/blackjack">Blackjack</Link>
-            </div>
-            <div className="nav-button">
-              <Link to="/holdem">Texas Holdem</Link>
-            </div>
+            <Link to="/blackjack">
+              <div className="nav-button">Blackjack</div>
+            </Link>
+            <Link to="/holdem">
+              <div className="nav-button">Texas Holdem</div>
+            </Link>
           </div>
         </div>
       </div>

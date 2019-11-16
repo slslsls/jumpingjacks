@@ -8,7 +8,9 @@ class BlackjackContainer extends React.Component {
   state = {
     cards: getShuffledDeck('blackjack'),
     cardsDealtStage: 'cards-pre-deal',
-    instantTransition: false
+    instantTransition: false,
+    correctAnswers: 0,
+    totalAnswers: 0
   };
 
   componentDidMount = () => {
@@ -27,11 +29,19 @@ class BlackjackContainer extends React.Component {
   }
 
   evaluate = (action) => {
-    return () => {
-      this.setState({
-        evaluated: true,
-        selectedAction: action
-      });
+    if (!this.state.evaluated) {
+      return () => {
+        this.setState({
+          evaluated: true,
+          selectedAction: action,
+          totalAnswers: this.state.totalAnswers + 1
+        });
+        if (action === this.state.correctAction) {
+          this.setState({
+            correctAnswers: this.state.correctAnswers + 1
+          });
+        }
+      }
     }
   }
 
@@ -75,6 +85,10 @@ class BlackjackContainer extends React.Component {
     }
   }
 
+  getScore = () => {
+    return `${this.state.correctAnswers}/${this.state.totalAnswers} (${Math.round((this.state.correctAnswers/this.state.totalAnswers) * 100)}%)`
+  }
+
   render() {
     return (
       <div onClick={this.dealAgain}>
@@ -111,7 +125,7 @@ class BlackjackContainer extends React.Component {
           </div>
         </div>
         <div className={`${!this.state.evaluated ? 'invisible' : ''} deal-again`}>
-          Tap anywhere to deal again!
+          {this.getScore()} Tap anywhere to deal again!
         </div>
       </div>
     )

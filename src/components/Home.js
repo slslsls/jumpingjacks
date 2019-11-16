@@ -7,12 +7,12 @@ class Home extends React.Component {
     return (
       <div>
         <div className="home-background">
-          <div className="home-text-box">
+          <div className="home-frame">
             <div className="nav-button">
-              <h2><Link to="/blackjack">Blackjack</Link></h2>
+              <Link to="/blackjack">Blackjack</Link>
             </div>
             <div className="nav-button">
-              <h2><Link to="/holdem">Texas Holdem</Link></h2>
+              <Link to="/holdem">Texas Holdem</Link>
             </div>
           </div>
         </div>

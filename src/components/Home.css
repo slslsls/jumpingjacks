@@ -9,6 +9,10 @@ body, html {
     margin: 0;
 }
 
+.invisible {
+  opacity: 0;
+}
+
 .home-background {
   height: 1000px;
   background-size: cover;
@@ -17,13 +21,18 @@ body, html {
   background-image: url(/background.png);
   background-size: 100%;
   padding-top: 100px;
+  -webkit-transition:all .5s ease;
+     -moz-transition:all .5s ease;
+      -ms-transition:all .5s ease;
+       -o-transition:all .5s ease;
+          transition:all .5s ease;
 }
 
 .home-frame {
-  height: 290px;
+  height: 350px;
   width: 320px;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 75px;
   border-radius: 5px;
   background-color: rgb(255, 255, 255, .22);
   padding: 15px;
@@ -32,7 +41,7 @@ body, html {
 .nav-button {
   padding: 18px;
   background-color: #00a47f;
-  margin-top: 50px;
+  margin-top: 70px;
   border-radius: 5px;
   font-size: 1.5em;
 }

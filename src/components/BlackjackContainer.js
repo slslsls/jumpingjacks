@@ -4,9 +4,7 @@ import { ReactComponent as HomeButton } from '../assets/homebutton.svg';
 import getShuffledDeck from '../utils/common/dealerUtils';
 import { getAction } from '../utils/blackjack/scenarioUtils';
 import './BlackjackContainer.css';
-import {
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class BlackjackContainer extends React.Component {
   state = {
@@ -123,25 +121,26 @@ class BlackjackContainer extends React.Component {
           </div>
         </div>
         <div className="actions-container">
-          <div className={`${this.getEvaluatedColor('Hit')} action-button`} onClick={this.evaluate('Hit')}>
-            Hit
-          </div>
-          <div className={`${this.getEvaluatedColor('Stay')} action-button`} onClick={this.evaluate('Stay')}>
-            Stay
+          <div className={`${this.getEvaluatedColor('DD')} action-button`} onClick={this.evaluate('DD')}>
+            DD
           </div>
           <div className={`${this.getEvaluatedColor('Split')} action-button`} onClick={this.evaluate('Split')}>
             Split
           </div>
-          <div className={`${this.getEvaluatedColor('DD')} action-button`} onClick={this.evaluate('DD')}>
-            DD
+          <div className={`${this.getEvaluatedColor('Stay')} action-button`} onClick={this.evaluate('Stay')}>
+            Stay
           </div>
-        </div>
-        <div className={`${!this.state.evaluated ? 'invisible' : ''} deal-again`}>
+          <div className={`${this.getEvaluatedColor('Hit')} action-button`} onClick={this.evaluate('Hit')}>
+            Hit
+          </div>
+          <div className={`${!this.state.evaluated ? 'invisible' : ''} deal-again`}>
           <span className={
             `${this.state.evaluated ? '' : 'invisible' }
             ${this.state.evaluation}
-            deal-again`
+            deal-again
+            evaluation-message`
           }>{this.getScore()}</span> Tap anywhere to deal again!
+          </div>
         </div>
       </div>
     )

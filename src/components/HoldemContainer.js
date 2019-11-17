@@ -1,9 +1,16 @@
 import React from 'react';
+import { ReactComponent as HomeButton } from '../assets/homebutton.svg';
+import { ReactComponent as DownCard } from '../assets/downcard.svg';
 import ScenarioUtils from '../utils/holdem/scenarioUtils';
 import Result from './Result';
+import { Link } from "react-router-dom";
 
 class HoldemContainer extends React.Component {
   state = {
+    cardsDealtStage: 'cards-pre-deal',
+    instantTransition: false,
+    correctAnswers: 0,
+    totalAnswers: 0,
     scenario: ScenarioUtils.getScenario('preFlop', 'Early'),
     roundIsOver: false,
     result: ''
@@ -37,6 +44,10 @@ class HoldemContainer extends React.Component {
   render() {
     return (
       <div onClick={this.getNewScenario}>
+        <div className="ad"></div>
+        <Link to="/" className="home-button-container">
+          <HomeButton className="home-button" />
+        </Link>
         <p>{this.state.scenario.stage}</p>
         <p>{this.state.scenario.position}</p>
         <p>{this.state.scenario.leadUp}</p>

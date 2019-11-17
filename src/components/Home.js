@@ -23,9 +23,6 @@ class Home extends React.Component {
             <Link to="/blackjack">
               <div className="nav-button">Blackjack</div>
             </Link>
-            <Link to="/holdem">
-              <div className="nav-button">Texas Holdem</div>
-            </Link>
           </div>
         </div>
       </div>

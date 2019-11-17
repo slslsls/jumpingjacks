@@ -99,25 +99,27 @@ class BlackjackContainer extends React.Component {
   render() {
     return (
       <div onClick={this.dealAgain}>
-        <div className="ad"></div>
-        <Link to="/" className="home-button-container">
-          <HomeButton className="home-button" />
-        </Link>
-        <div className="dealer-cards-container">
-          <div className={`${this.state.cardsDealtStage} ${this.state.instantTransition ? 'instant-transition' : ''} card dealer-downcard`}>
-            <DownCard />
+        <div>
+          <div className="ad"></div>
+          <Link to="/" className="home-button-container">
+            <HomeButton className="home-button" />
+          </Link>
+          <div className="dealer-cards-container">
+            <div className={`${this.state.cardsDealtStage} ${this.state.instantTransition ? 'instant-transition' : ''} card dealer-downcard`}>
+              <DownCard />
+            </div>
+            <div className={`${this.state.cardsDealtStage} ${this.state.instantTransition ? 'instant-transition' : ''} card dealer-upcard`}>
+              {this.state.cards[0].component}
+            </div>
+            <p>DEALER</p>
           </div>
-          <div className={`${this.state.cardsDealtStage} ${this.state.instantTransition ? 'instant-transition' : ''} card dealer-upcard`}>
-            {this.state.cards[0].component}
-          </div>
-          <p>DEALER</p>
-        </div>
-        <div className="user-cards-container">
-          <div className={`${this.state.cardsDealtStage} ${this.state.instantTransition ? 'instant-transition' : ''} card user-backcard`}>
-            {this.state.cards[1].component}
-          </div>
-          <div className={`${this.state.cardsDealtStage} ${this.state.instantTransition ? 'instant-transition' : ''} card user-frontcard`}>
-            {this.state.cards[2].component}
+          <div className="user-cards-container">
+            <div className={`${this.state.cardsDealtStage} ${this.state.instantTransition ? 'instant-transition' : ''} card user-backcard`}>
+              {this.state.cards[1].component}
+            </div>
+            <div className={`${this.state.cardsDealtStage} ${this.state.instantTransition ? 'instant-transition' : ''} card user-frontcard`}>
+              {this.state.cards[2].component}
+            </div>
           </div>
         </div>
         <div className="actions-container">

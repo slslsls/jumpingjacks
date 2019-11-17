@@ -9,6 +9,24 @@ html, body {
   /* overflow: hidden */
 }
 
+.action-button {
+  width: 80px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin: 5px;
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #00a47f;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  -webkit-transition:all .2s ease;
+     -moz-transition:all .2s ease;
+      -ms-transition:all .2s ease;
+       -o-transition:all .2s ease;
+          transition:all .2s ease;
+}
+
 .evaluated-correct {
   background-color: #00a47f;
 }
@@ -157,22 +175,4 @@ html, body {
 
 .home-button-container {
   margin-top: 100px;
-}
-
-.action-button {
-  width: 80px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  margin: 5px;
-  display: inline-block;
-  border-radius: 5px;
-  background-color: #00a47f;
-  color: white;
-  font-weight: bold;
-  font-size: 1.1em;
-  -webkit-transition:all .2s ease;
-     -moz-transition:all .2s ease;
-      -ms-transition:all .2s ease;
-       -o-transition:all .2s ease;
-          transition:all .2s ease;
 }

@@ -85,8 +85,8 @@ class BlackjackContainer extends React.Component {
     });
   }
 
-  dealAgain = () => {
-    if (this.state.evaluated) {
+  dealAgain = (e) => {
+    if (this.state.evaluated && e.target.id !== 'info') {
       this.setState({
         cardsDealtStage: 'cards-discarded',
       });
@@ -150,7 +150,7 @@ class BlackjackContainer extends React.Component {
             }>{this.getScore()}</span> Tap anywhere to deal again!
             </div>
         </div>
-        <InfoButton className="info-button" onClick={this.toggleGrid} />
+        <InfoButton id="info" className="info-button" onClick={this.toggleGrid} />
         <Link to="/" className="home-button-container">
           <HomeButton className="home-button" />
         </Link>

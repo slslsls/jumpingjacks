@@ -172,14 +172,14 @@ html, body {
   height: 35px;
   width: 35px;
   position: absolute;
-  right: 70px;
+  right: 80px;
   bottom: 15px;
   padding: 0;
 }
 
 .home-button {
   position: absolute;
-  right: 15px;
+  right: 20px;
   bottom: 15px;
   height: 40px;
   width: 40px;

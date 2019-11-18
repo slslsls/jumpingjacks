@@ -1,45 +1,50 @@
 import React from 'react';
 import './Grid.css';
+import Translations from '../utils/common/translations';
 
 const dealerCards = ['2','3','4','5','6','7','8','9','10','A'];
-const firstUserHandActions = ['H','H','H','H','H','H','H','H','H','H'];
+const firstUserHandActions = ['hit','hit','hit','hit','hit','hit','hit','hit','hit','hit'];
 const userHandActions = {
-  '9': ['H','DD','DD','DD','DD','H','H','H','H','H'],
-  '10': ['DD','DD','DD','DD','DD','DD','DD','DD','H','H'],
-  '11': ['DD','DD','DD','DD','DD','DD','DD','DD','DD','H'],
-  '12': ['H','H','St','St','St','H','H','H','H','H'],
-  '13': ['St','St','St','St','St','H','H','H','H','H'],
-  '14': ['St','St','St','St','St','H','H','H','H','H'],
-  '15': ['St','St','St','St','St','H','H','H','H','H'],
-  '16': ['St','St','St','St','St','H','H','H','H','H'],
-  '17': ['St','St','St','St','St','St','St','St','St','St'],
-  'A,2': ['H','H','H','DD','DD','H','H','H','H','H'],
-  'A,3': ['H','H','H','DD','DD','H','H','H','H','H'],
-  'A,4': ['H','H','DD','DD','DD','H','H','H','H','H'],
-  'A,5': ['H','H','DD','DD','DD','H','H','H','H','H'],
-  'A,6': ['H','DD','DD','DD','DD','H','H','H','H','H'],
-  'A,7': ['St','DD','DD','DD','DD','St','St','H','H','H'],
-  'A,8': ['St','St','St','St','St','St','St','St','St','St'],
-  'A,9': ['St','St','St','St','St','St','St','St','St','St'],
-  '2,2': ['Sp','Sp','Sp','Sp','Sp','Sp','H','H','H','H'],
-  '3,3': ['Sp','Sp','Sp','Sp','Sp','Sp','H','H','H','H'],
-  '4,4': ['H','H','H','Sp','Sp','H','H','H','H','H'],
-  '5,5': ['DD','DD','DD','DD','DD','DD','DD','DD','H','H'],
-  '6,6': ['Sp','Sp','Sp','Sp','Sp','H','H','H','H','H'],
-  '7,7': ['Sp','Sp','Sp','Sp','Sp','Sp','H','H','H','H'],
-  '8,8': ['Sp','Sp','Sp','Sp','Sp','Sp','Sp','Sp','Sp','Sp'],
-  '9,9': ['Sp','Sp','Sp','Sp','Sp','St','Sp','Sp','St','St'],
-  '10,10': ['St','St','St','St','St','St','St','St','St','St'],
-  'A,A': ['Sp','Sp','Sp','Sp','Sp','Sp','Sp','Sp','Sp','Sp']
+  '9': ['hit','double_down','double_down','double_down','double_down','hit','hit','hit','hit','hit'],
+  '10': ['double_down','double_down','double_down','double_down','double_down','double_down','double_down','double_down','hit','hit'],
+  '11': ['double_down','double_down','double_down','double_down','double_down','double_down','double_down','double_down','double_down','hit'],
+  '12': ['hit','hit','stay','stay','stay','hit','hit','hit','hit','hit'],
+  '13': ['stay','stay','stay','stay','stay','hit','hit','hit','hit','hit'],
+  '14': ['stay','stay','stay','stay','stay','hit','hit','hit','hit','hit'],
+  '15': ['stay','stay','stay','stay','stay','hit','hit','hit','hit','hit'],
+  '16': ['stay','stay','stay','stay','stay','hit','hit','hit','hit','hit'],
+  '17': ['stay','stay','stay','stay','stay','stay','stay','stay','stay','stay'],
+  'A,2': ['hit','hit','hit','double_down','double_down','hit','hit','hit','hit','hit'],
+  'A,3': ['hit','hit','hit','double_down','double_down','hit','hit','hit','hit','hit'],
+  'A,4': ['hit','hit','double_down','double_down','double_down','hit','hit','hit','hit','hit'],
+  'A,5': ['hit','hit','double_down','double_down','double_down','hit','hit','hit','hit','hit'],
+  'A,6': ['hit','double_down','double_down','double_down','double_down','hit','hit','hit','hit','hit'],
+  'A,7': ['stay','double_down','double_down','double_down','double_down','stay','stay','hit','hit','hit'],
+  'A,8': ['stay','stay','stay','stay','stay','stay','stay','stay','stay','stay'],
+  'A,9': ['stay','stay','stay','stay','stay','stay','stay','stay','stay','stay'],
+  '2,2': ['split','split','split','split','split','split','hit','hit','hit','hit'],
+  '3,3': ['split','split','split','split','split','split','hit','hit','hit','hit'],
+  '4,4': ['hit','hit','hit','split','split','hit','hit','hit','hit','hit'],
+  '5,5': ['double_down','double_down','double_down','double_down','double_down','double_down','double_down','double_down','hit','hit'],
+  '6,6': ['split','split','split','split','split','hit','hit','hit','hit','hit'],
+  '7,7': ['split','split','split','split','split','split','hit','hit','hit','hit'],
+  '8,8': ['split','split','split','split','split','split','split','split','split','split'],
+  '9,9': ['split','split','split','split','split','stay','split','split','stay','stay'],
+  '10,10': ['stay','stay','stay','stay','stay','stay','stay','stay','stay','stay'],
+  'A,A': ['split','split','split','split','split','split','split','split','split','split']
 };
 const actionClasses = {
-  'H': 'grid-hit',
-  'St': 'grid-stay',
-  'DD': 'grid-dd',
-  'Sp': 'grid-split'
+  'hit': 'grid-hit',
+  'stay': 'grid-stay',
+  'double_down': 'grid-dd',
+  'split': 'grid-split'
 };
 
 class Grid extends React.Component {
+  state = {
+    text: Translations.mandarin.blackjack.grid
+  };
+
   render() {
     return (
       <table>
@@ -47,23 +52,23 @@ class Grid extends React.Component {
           <tr>
             <th></th>
             <th></th>
-            <th colSpan="10">Dealer's Card</th>
+            <th colSpan="10">{this.state.text.dealers_card}</th>
           </tr>
           <tr>
-            <th className="your-hand-cell"><div className="your-hand-text">Your Hand</div></th>
+            <th className="your-hand-cell"><div className="your-hand-text">{this.state.text.your_hand}</div></th>
             <th></th>
             {dealerCards.map((c, idx) => <th key={idx}>{c}</th>)}
           </tr>
           <tr>
             <td className="no-top-border"></td>
             <th>2 - 8</th>
-            {firstUserHandActions.map((h, idx) => <td key={idx} className={actionClasses[h]}>{h}</td>)}
+            {firstUserHandActions.map((h, idx) => <td key={idx} className={actionClasses[h]}>{this.state.text[h]}</td>)}
           </tr>
           {Object.keys(userHandActions).map((h, idx) =>
             <tr key={idx}>
               <td className="no-top-border"></td>
               <th>{h}</th>
-              {userHandActions[h].map((h, idx) => <td  key={idx} className={actionClasses[h]}>{h}</td>)}
+              {userHandActions[h].map((h, idx) => <td  key={idx} className={actionClasses[h]}>{this.state.text[h]}</td>)}
             </tr>
           )}
         </tbody>

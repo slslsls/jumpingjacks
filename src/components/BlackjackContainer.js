@@ -7,6 +7,7 @@ import getShuffledDeck from '../utils/common/dealerUtils';
 import { getAction } from '../utils/blackjack/scenarioUtils';
 import './BlackjackContainer.css';
 import { Link } from "react-router-dom";
+import Translations from '../utils/common/translations';
 
 class BlackjackContainer extends React.Component {
   state = {
@@ -15,7 +16,8 @@ class BlackjackContainer extends React.Component {
     instantTransition: false,
     correctAnswers: 0,
     totalAnswers: 0,
-    showGrid: false
+    showGrid: false,
+    text: Translations.mandarin.blackjack.gameplay
   };
 
   componentDidMount = () => {
@@ -117,7 +119,7 @@ class BlackjackContainer extends React.Component {
             <div className={`${this.state.cardsDealtStage} ${this.state.instantTransition ? 'instant-transition' : ''} card dealer-upcard`}>
               {this.state.cards[0].component}
             </div>
-            <p>DEALER</p>
+            <p>{this.state.text.dealer}</p>
           </div>
           <div className="user-cards-container">
             <div className={`${this.state.cardsDealtStage} ${this.state.instantTransition ? 'instant-transition' : ''} card user-backcard`}>
@@ -130,16 +132,16 @@ class BlackjackContainer extends React.Component {
         </div>
         <div className="actions-container">
           <div className={`${this.getEvaluatedColor('DD')} action-button`} onClick={this.evaluate('DD')}>
-            DD
+            {this.state.text.double_down}
           </div>
           <div className={`${this.getEvaluatedColor('Split')} action-button`} onClick={this.evaluate('Split')}>
-            Split
+            {this.state.text.split}
           </div>
           <div className={`${this.getEvaluatedColor('Stay')} action-button`} onClick={this.evaluate('Stay')}>
-            Stay
+            {this.state.text.stay}
           </div>
           <div className={`${this.getEvaluatedColor('Hit')} action-button`} onClick={this.evaluate('Hit')}>
-            Hit
+            {this.state.text.hit}
           </div>
           <div className={`${!this.state.evaluated ? 'invisible' : ''} deal-again`}>
             <span className={
@@ -147,7 +149,7 @@ class BlackjackContainer extends React.Component {
               ${this.state.evaluation}
               deal-again
               evaluation-message`
-            }>{this.getScore()}</span> Tap anywhere to deal again!
+            }>{this.getScore()}</span> {this.state.text.deal_again}
             </div>
         </div>
         <InfoButton id="info" className="info-button" onClick={this.toggleGrid} />

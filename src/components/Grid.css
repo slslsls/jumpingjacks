@@ -59,8 +59,10 @@ th:last-child, td:last-child {
 
 .your-hand-text {
   position: absolute;
-  left: -24px;
-  top: 280px;
+  width: 5px;
+  white-space: nowrap;
+  left: 7px;
+  top: 300px;
   transform: rotate(-90deg);
   color: gray;
 }

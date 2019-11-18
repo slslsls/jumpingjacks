@@ -43,28 +43,30 @@ class Grid extends React.Component {
   render() {
     return (
       <table>
-        <tr>
-          <th></th>
-          <th></th>
-          <th colspan="10">Dealer's Card</th>
-        </tr>
-        <tr>
-          <th></th>
-          <th></th>
-          {dealerCards.map(c => <th>{c}</th>)}
-        </tr>
-        <tr>
-          <td></td>
-          <th>2 - 8</th>
-          {firstUserHandActions.map(h => <td className={actionClasses[h]}>{h}</td>)}
-        </tr>
-        {Object.keys(userHandActions).map(h =>
+        <tbody>
           <tr>
-            <td></td>
-            <th>{h}</th>
-            {userHandActions[h].map(h => <td className={actionClasses[h]}>{h}</td>)}
+            <th></th>
+            <th></th>
+            <th colSpan="10">Dealer's Card</th>
           </tr>
-        )}
+          <tr>
+            <th className="your-hand-cell"><div className="your-hand-text">Your Hand</div></th>
+            <th></th>
+            {dealerCards.map((c, idx) => <th key={idx}>{c}</th>)}
+          </tr>
+          <tr>
+            <td className="no-top-border"></td>
+            <th>2 - 8</th>
+            {firstUserHandActions.map((h, idx) => <td key={idx} className={actionClasses[h]}>{h}</td>)}
+          </tr>
+          {Object.keys(userHandActions).map((h, idx) =>
+            <tr key={idx}>
+              <td className="no-top-border"></td>
+              <th>{h}</th>
+              {userHandActions[h].map((h, idx) => <td  key={idx} className={actionClasses[h]}>{h}</td>)}
+            </tr>
+          )}
+        </tbody>
       </table>
     );
   }

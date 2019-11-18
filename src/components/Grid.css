@@ -2,22 +2,21 @@ table {
   border: 1px solid #D6DFE9;
   border-radius: 5px;
   background-color: white;
-  left: 10px;
-  top: 10px;
   width: 95%;
-  position: fixed;
   border-collapse: separate;
   border-spacing: 0;
 }
 
 tr, td, th {
-  background-color: white;
+  background-color: #FDFDFD;
   color: gray;
   font-size: .9em;
   border-right: 1px solid #D6DFE9;
   border-bottom: 1px solid #D6DFE9;
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 1.5px;
+  padding-bottom: 1.5px;
 }
 
 td {
@@ -47,4 +46,21 @@ th:last-child, td:last-child {
 .grid-split {
   background-color: #42247e;
   color: white;
+}
+
+.no-top-border {
+  border-top: none;
+  border-bottom: none;
+}
+
+.your-hand-cell {
+  overflow: visible;
+}
+
+.your-hand-text {
+  position: absolute;
+  left: -24px;
+  top: 280px;
+  transform: rotate(-90deg);
+  color: gray;
 }

@@ -187,3 +187,18 @@ html, body {
 .home-button-container {
   margin-top: 100px;
 }
+
+.grid {
+  left: 10px;
+  top: 100px;
+  position: fixed;
+  -webkit-transition:all .5s ease;
+     -moz-transition:all .5s ease;
+      -ms-transition:all .5s ease;
+       -o-transition:all .5s ease;
+          transition:all .5s ease;
+}
+
+.grid-offscreen {
+  left: 450px;
+}

@@ -14,7 +14,8 @@ class BlackjackContainer extends React.Component {
     cardsDealtStage: 'cards-pre-deal',
     instantTransition: false,
     correctAnswers: 0,
-    totalAnswers: 0
+    totalAnswers: 0,
+    showGrid: false
   };
 
   componentDidMount = () => {
@@ -98,6 +99,12 @@ class BlackjackContainer extends React.Component {
     return `${this.state.correctAnswers}/${this.state.totalAnswers} (${Math.round((this.state.correctAnswers/this.state.totalAnswers) * 100)}%)`
   }
 
+  toggleGrid = () => {
+    this.setState({
+      showGrid: !this.state.showGrid
+    });
+  }
+
   render() {
     return (
       <div onClick={this.dealAgain}>
@@ -143,13 +150,13 @@ class BlackjackContainer extends React.Component {
             }>{this.getScore()}</span> Tap anywhere to deal again!
             </div>
         </div>
-        <Link to="/" className="info-button-container">
-          <InfoButton className="info-button" />
-        </Link>
+        <InfoButton className="info-button" onClick={this.toggleGrid} />
         <Link to="/" className="home-button-container">
           <HomeButton className="home-button" />
         </Link>
-        <Grid />
+        <div className={`${this.state.showGrid ? '' : 'grid-offscreen'} grid`}>
+          <Grid />
+        </div>
       </div>
     )
   }

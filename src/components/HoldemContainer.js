@@ -1,6 +1,5 @@
 import React from 'react';
 import { ReactComponent as HomeButton } from '../assets/homebutton.svg';
-import { ReactComponent as DownCard } from '../assets/downcard.svg';
 import ScenarioUtils from '../utils/holdem/scenarioUtils';
 import Result from './Result';
 import { Link } from "react-router-dom";

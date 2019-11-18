@@ -94,7 +94,7 @@ html, body {
 
 .user-backcard {
   position: fixed;
-  top: 53%;
+  top: 54%;
   left: 31%;
   -webkit-transition:all .2s ease;
      -moz-transition:all .2s ease;
@@ -105,7 +105,7 @@ html, body {
 
 .user-frontcard {
   position: fixed;
-  top: 49%;
+  top: 50%;
   left: 43%;
   -webkit-transition:all .5s ease;
      -moz-transition:all .5s ease;
@@ -124,7 +124,7 @@ html, body {
 
 .user-cards-container {
   width: 100%;
-  height: 230px;
+  height: 240px;
 }
 
 .actions-container {
@@ -162,16 +162,24 @@ html, body {
 }
 
 .ad {
-  margin-left: 0;
+  margin: auto;
   width: 320px;
   height: 100px;
   background-color: blue;
 }
 
+.info-button {
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  right: 70px;
+  bottom: 15px;
+}
+
 .home-button {
   position: absolute;
   right: 15px;
-  top: 15px;
+  bottom: 15px;
   height: 40px;
   width: 40px;
 }

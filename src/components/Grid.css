@@ -1,0 +1,50 @@
+table {
+  border: 1px solid #D6DFE9;
+  border-radius: 5px;
+  background-color: white;
+  left: 10px;
+  top: 10px;
+  width: 95%;
+  position: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+tr, td, th {
+  background-color: white;
+  color: gray;
+  font-size: .9em;
+  border-right: 1px solid #D6DFE9;
+  border-bottom: 1px solid #D6DFE9;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+td {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+th:last-child, td:last-child {
+  border-right: none;
+}
+
+.grid-hit {
+  background-color: #00a47f;
+  color: white;
+}
+
+.grid-stay {
+  background-color: red;
+  color: white;
+}
+
+.grid-dd {
+  background-color: #F9D160;
+  color: white;
+}
+
+.grid-split {
+  background-color: #42247e;
+  color: white;
+}

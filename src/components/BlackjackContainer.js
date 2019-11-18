@@ -1,6 +1,8 @@
 import React from 'react';
 import { ReactComponent as DownCard } from '../assets/downcard.svg';
+import { ReactComponent as InfoButton } from '../assets/infobutton.svg';
 import { ReactComponent as HomeButton } from '../assets/homebutton.svg';
+import Grid from './Grid';
 import getShuffledDeck from '../utils/common/dealerUtils';
 import { getAction } from '../utils/blackjack/scenarioUtils';
 import './BlackjackContainer.css';
@@ -101,9 +103,6 @@ class BlackjackContainer extends React.Component {
       <div onClick={this.dealAgain}>
         <div>
           <div className="ad"></div>
-          <Link to="/" className="home-button-container">
-            <HomeButton className="home-button" />
-          </Link>
           <div className="dealer-cards-container">
             <div className={`${this.state.cardsDealtStage} ${this.state.instantTransition ? 'instant-transition' : ''} card dealer-downcard`}>
               <DownCard />
@@ -136,14 +135,21 @@ class BlackjackContainer extends React.Component {
             Hit
           </div>
           <div className={`${!this.state.evaluated ? 'invisible' : ''} deal-again`}>
-          <span className={
-            `${this.state.evaluated ? '' : 'invisible' }
-            ${this.state.evaluation}
-            deal-again
-            evaluation-message`
-          }>{this.getScore()}</span> Tap anywhere to deal again!
-          </div>
+            <span className={
+              `${this.state.evaluated ? '' : 'invisible' }
+              ${this.state.evaluation}
+              deal-again
+              evaluation-message`
+            }>{this.getScore()}</span> Tap anywhere to deal again!
+            </div>
         </div>
+        <Link to="/" className="info-button-container">
+          <InfoButton className="info-button" />
+        </Link>
+        <Link to="/" className="home-button-container">
+          <HomeButton className="home-button" />
+        </Link>
+        <Grid />
       </div>
     )
   }

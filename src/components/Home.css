@@ -50,5 +50,16 @@ body, html {
   height: 100px;
   background-color: white;
   border-radius: 5px;
-  padding: 5px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.language {
+  border: 1px solid lightgray;
+  border-left: none;
+  border-top: none;
+  margin: -1px;
+  display: inline-block;
+  color: gray;
+  padding: 10px;
 }

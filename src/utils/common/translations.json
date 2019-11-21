@@ -23,6 +23,30 @@
       }
     }
   },
+  "Português": {
+    "language": "portuguese",
+    "home": {
+      "practice_blackjack": "Praticar Vinte e Um"
+    },
+    "blackjack": {
+      "gameplay": {
+        "dealer": "NEGOCIANTE DO CASSINO",
+        "double_down": "Dobrar",
+        "split": "Dividir",
+        "stay": "Perm.",
+        "hit": "Tirar",
+        "deal_again": "Toque em qualquer lugar para recomeçar!"
+      },
+      "grid": {
+        "dealers_card": "Cartas do Negociante",
+        "your_hand": "Suas Cartas",
+        "double_down": "Dob",
+        "split": "Div",
+        "stay": "P",
+        "hit": "T"
+      }
+    }
+  },
   "官话": {
     "language": "mandarin",
     "home": {

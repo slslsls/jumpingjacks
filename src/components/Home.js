@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Translations from '../utils/common/translations';
 import './Home.css';
-import { observer } from 'mobx-react';
 
 const languages = [
   Translations.english_label,
@@ -56,7 +55,5 @@ class Home extends React.Component {
     )
   }
 }
-
-Home = observer(Home);
 
 export default Home;

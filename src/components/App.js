@@ -8,15 +8,10 @@ import {
   Route,
   Redirect
 } from "react-router-dom";
-import { decorate, observable } from 'mobx';
 
 class Store {
   language = 'English'
 }
-
-decorate(Store, {
-  language: observable
-});
 
 const appStore = new Store();
 

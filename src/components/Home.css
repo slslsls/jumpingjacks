@@ -55,12 +55,13 @@ body, html {
 }
 
 .language {
-  border: 1px solid lightgray;
+  font-size: 1.1em;
+  border: 1px solid #F0D27E;
   border-left: none;
   border-top: none;
   margin: -1px;
   display: inline-block;
-  color: gray;
+  color: #F0D27E;
   padding: 10px;
   -webkit-transition:all .2s ease;
      -moz-transition:all .2s ease;
@@ -70,10 +71,10 @@ body, html {
 }
 
 .language:first-child {
-  border-left: 1px solid lightgray;
+  border-left: 1px solid #F0D27E;
 }
 
 .selected-language {
   color: white;
-  background-color: gray;
+  background-color: #F0D27E;
 }

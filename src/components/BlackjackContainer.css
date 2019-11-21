@@ -45,12 +45,12 @@ html, body {
   position: relative;
   height: 14.5em;
   width: 65%;
-  border: 3px solid #F9D160;
+  border: 3px solid #F0D27E;
 }
 
 .dealer-cards-container p {
   font-size: .8em;
-  color: #F9D160;
+  color: #F0D27E;
   position: absolute;
   bottom: -12px;
   width: 100%;

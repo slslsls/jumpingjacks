@@ -3,11 +3,6 @@ import { Link } from 'react-router-dom';
 import Translations from '../utils/common/translations';
 import './Home.css';
 
-const languages = [
-  Translations.english_label,
-  Translations.mandarin_label
-];
-
 class Home extends React.Component {
   state = {
     display: false,
@@ -37,7 +32,7 @@ class Home extends React.Component {
         <div className={`${this.state.display ? '' : 'invisible'} home-background`}>
           <div className="home-frame">
             <div className="language-window">
-              {languages.map((l, idx ) =>
+              {Object.keys(Translations).map((l, idx ) =>
                 <div
                   key={idx}
                   className="language"

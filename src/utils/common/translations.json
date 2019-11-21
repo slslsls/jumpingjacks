@@ -1,7 +1,6 @@
 {
-  "english_label": "English",
-  "mandarin_label": "普通话",
   "English": {
+    "language": "english",
     "home": {
       "practice_blackjack": "Practice Blackjack"
     },
@@ -24,7 +23,8 @@
       }
     }
   },
-  "普通话": {
+  "官话": {
+    "language": "mandarin",
     "home": {
       "practice_blackjack": "练习 二十一點"
     },
@@ -44,6 +44,30 @@
         "split": "分牌",
         "stay": "停叫",
         "hit": "叫牌"
+      }
+    }
+  },
+  "Español": {
+    "language": "spanish",
+    "home": {
+      "practice_blackjack": "Practicar Veintiuna"
+    },
+    "blackjack": {
+      "gameplay": {
+        "dealer": "DISTRIBUIDOR DE CASINO",
+        "double_down": "Doblar",
+        "split": "Dividir",
+        "stay": "Perm.",
+        "hit": "Tirar",
+        "deal_again": "Toque en cualquier lugar para volver a negociar!"
+      },
+      "grid": {
+        "dealers_card": "Naipe de Distribuidor",
+        "your_hand": "Sus Naipes",
+        "double_down": "Dob",
+        "split": "Div",
+        "stay": "P",
+        "hit": "T"
       }
     }
   }

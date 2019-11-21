@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Translations from '../utils/common/translations';
 import './Home.css';
+import { observer } from 'mobx-react';
 
 const languages = [
   Translations.english_label,
@@ -11,7 +12,7 @@ const languages = [
 class Home extends React.Component {
   state = {
     display: false,
-    text: Translations.mandarin.home
+    text: Translations[this.props.store.language].home
   };
 
   componentDidMount = () => {
@@ -20,6 +21,15 @@ class Home extends React.Component {
         display: true,
       });
     }, 300);
+  }
+
+  changeLanguage = (newLanguage) => {
+    return () => {
+      this.props.store.language = newLanguage;
+      this.setState({
+        text: Translations[this.props.store.language].home
+      });
+    }
   }
 
   render() {
@@ -32,6 +42,7 @@ class Home extends React.Component {
                 <div
                   key={idx}
                   className="language"
+                  onClick={this.changeLanguage(l)}
                 >
                   {l}
                 </div>)}
@@ -45,5 +56,7 @@ class Home extends React.Component {
     )
   }
 }
+
+Home = observer(Home);
 
 export default Home;

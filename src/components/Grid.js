@@ -42,7 +42,7 @@ const actionClasses = {
 
 class Grid extends React.Component {
   state = {
-    text: Translations.mandarin.blackjack.grid
+    text: Translations[this.props.store.language].blackjack.grid
   };
 
   render() {

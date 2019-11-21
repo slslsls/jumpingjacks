@@ -1,7 +1,7 @@
 {
   "english_label": "English",
   "mandarin_label": "普通话",
-  "english": {
+  "English": {
     "home": {
       "practice_blackjack": "Practice Blackjack"
     },
@@ -24,7 +24,7 @@
       }
     }
   },
-  "mandarin": {
+  "普通话": {
     "home": {
       "practice_blackjack": "练习 二十一點"
     },

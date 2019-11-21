@@ -17,7 +17,7 @@ class BlackjackContainer extends React.Component {
     correctAnswers: 0,
     totalAnswers: 0,
     showGrid: false,
-    text: Translations.mandarin.blackjack.gameplay
+    text: Translations[this.props.store.language].blackjack.gameplay
   };
 
   componentDidMount = () => {
@@ -88,7 +88,7 @@ class BlackjackContainer extends React.Component {
   }
 
   dealAgain = (e) => {
-    if (this.state.evaluated && e.target.id !== 'info') {
+    if (this.state.evaluated && e.target.id !== 'info' && !this.state.showGrid) {
       this.setState({
         cardsDealtStage: 'cards-discarded',
       });
@@ -157,7 +157,7 @@ class BlackjackContainer extends React.Component {
           <HomeButton className="home-button" />
         </Link>
         <div className={`${this.state.showGrid ? '' : 'grid-offscreen'} grid`}>
-          <Grid />
+          <Grid store={this.props.store}/>
         </div>
       </div>
     )

@@ -175,6 +175,7 @@ html, body {
   right: 80px;
   bottom: 15px;
   padding: 0;
+  z-index: 10;
 }
 
 .home-button {

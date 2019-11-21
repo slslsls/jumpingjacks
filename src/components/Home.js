@@ -6,7 +6,8 @@ import './Home.css';
 class Home extends React.Component {
   state = {
     display: false,
-    text: Translations[this.props.store.language].home
+    text: Translations[this.props.store.language].home,
+    selectedLanguage: this.props.store.language
   };
 
   componentDidMount = () => {
@@ -21,7 +22,8 @@ class Home extends React.Component {
     return () => {
       this.props.store.language = newLanguage;
       this.setState({
-        text: Translations[this.props.store.language].home
+        text: Translations[newLanguage].home,
+        selectedLanguage: newLanguage
       });
     }
   }
@@ -35,7 +37,7 @@ class Home extends React.Component {
               {Object.keys(Translations).map((l, idx ) =>
                 <div
                   key={idx}
-                  className="language"
+                  className={`language ${this.state.selectedLanguage === l ? 'selected-language' : ''}`}
                   onClick={this.changeLanguage(l)}
                 >
                   {l}

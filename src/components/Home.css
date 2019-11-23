@@ -29,49 +29,42 @@ body, html {
 }
 
 .home-frame {
-  height: 350px;
   width: 320px;
   margin: auto;
   margin-top: 75px;
   border-radius: 5px;
   background-color: rgb(255, 255, 255, .22);
-  padding: 15px;
+  padding: 20px;
 }
 
 .nav-button {
   padding: 18px;
   background-color: #00a47f;
-  margin-top: 70px;
+  margin-top: 50px;
   border-radius: 5px;
   font-size: 1.5em;
 }
 
 .language-window {
-  height: 100px;
+  height: 130px;
   background-color: white;
   border-radius: 5px;
-  padding: 0;
   overflow: hidden;
 }
 
 .language {
   font-size: 1.1em;
-  border: 1px solid #F0D27E;
   border-left: none;
   border-top: none;
   margin: -1px;
   display: inline-block;
   color: #F0D27E;
-  padding: 10px;
+  padding: 12px;
   -webkit-transition:all .2s ease;
      -moz-transition:all .2s ease;
       -ms-transition:all .2s ease;
        -o-transition:all .2s ease;
           transition:all .2s ease;
-}
-
-.language:first-child {
-  border-left: 1px solid #F0D27E;
 }
 
 .selected-language {

@@ -94,5 +94,101 @@
         "hit": "T"
       }
     }
+  },
+  "Bahasa Melayu": {
+    "language": "malay",
+    "home": {
+      "practice_blackjack": "Berlatih Dua Puluh Satu"
+    },
+    "blackjack": {
+      "gameplay": {
+        "dealer": "Penjual Kasino",
+        "double_down": "Kembar",
+        "split": "Berp.",
+        "stay": "Tinggal",
+        "hit": "Kad Lain",
+        "deal_again": "Ketuk mana-mana sahaja untuk berurusan lagi!"
+      },
+      "grid": {
+        "dealers_card": "Kad Penjual",
+        "your_hand": "Kad Anda",
+        "double_down": "K",
+        "split": "B",
+        "stay": "T",
+        "hit": "L"
+      }
+    }
+  },
+  "Filipino": {
+    "language": "filipino",
+    "home": {
+      "practice_blackjack": "Pagsasanay Veintiuno"
+    },
+    "blackjack": {
+      "gameplay": {
+        "dealer": "Dealer",
+        "double_down": "Doble",
+        "split": "Pagbyak",
+        "stay": "Manatili",
+        "hit": "Isa Pang",
+        "deal_again": "I-tap kahit saan upang makitungo muli!"
+      },
+      "grid": {
+        "dealers_card": "Card ng Dealer",
+        "your_hand": "Iyong Card",
+        "double_down": "D",
+        "split": "P",
+        "stay": "M",
+        "hit": "I"
+      }
+    }
+  },
+  "Français": {
+    "language": "french",
+    "home": {
+      "practice_blackjack": "Pratiquer Vingt et Un"
+    },
+    "blackjack": {
+      "gameplay": {
+        "dealer": "Revendeur",
+        "double_down": "Doubler",
+        "split": "Partager",
+        "stay": "Rester",
+        "hit": "Tirer",
+        "deal_again": "Appuyez n'importe où pour traiter à nouveau!"
+      },
+      "grid": {
+        "dealers_card": "Carte du Revendeur",
+        "your_hand": "Vos Cartes",
+        "double_down": "D",
+        "split": "P",
+        "stay": "R",
+        "hit": "T"
+      }
+    }
+  },
+  "Italiano": {
+    "language": "italian",
+    "home": {
+      "practice_blackjack": "Pratica Ventuno"
+    },
+    "blackjack": {
+      "gameplay": {
+        "dealer": "Rivenditore",
+        "double_down": "Radd.",
+        "split": "Dividi",
+        "stay": "Resta",
+        "hit": "Pesca",
+        "deal_again": "Toccare un punto qualsiasi per trattare di nuovo!"
+      },
+      "grid": {
+        "dealers_card": "Carta del Rivenditore",
+        "your_hand": "Le Tue Carte",
+        "double_down": "Rad",
+        "split": "D",
+        "stay": "Res",
+        "hit": "P"
+      }
+    }
   }
 }

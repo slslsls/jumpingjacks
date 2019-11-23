@@ -149,7 +149,7 @@ class BlackjackContainer extends React.Component {
               ${this.state.evaluation}
               deal-again
               evaluation-message`
-            }>{this.getScore()}</span> {this.state.text.deal_again}
+            }>{this.getScore()}</span>{this.state.text.deal_again}
             </div>
         </div>
         <InfoButton id="info" className="info-button" onClick={this.toggleGrid} />

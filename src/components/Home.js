@@ -43,7 +43,7 @@ class Home extends React.Component {
                   {l}
                 </div>)}
             </div>
-            <Link to="/blackjack">
+            <Link to="/practice-blackjack">
               <div className="nav-button">{this.state.text.practice_blackjack}</div>
             </Link>
           </div>

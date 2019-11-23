@@ -23,7 +23,7 @@ function App() {
           <Route path="/holdem">
             <HoldemContainer />
           </Route>
-          <Route path="/blackjack">
+          <Route path="/practice-blackjack">
             <BlackjackContainer store={appStore} />
           </Route>
           <Route path="/">

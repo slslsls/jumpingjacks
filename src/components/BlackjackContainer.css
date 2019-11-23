@@ -137,6 +137,7 @@ html, body {
 
 .deal-again {
   color: gray;
+  padding: 5px;
   padding-top: 10px;
   -webkit-transition:all .75s ease;
      -moz-transition:all .75s ease;

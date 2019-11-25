@@ -1,0 +1,4 @@
+search for to-do's
+change cursor to pointer when hovering over links/buttons
+compress background image
+accessibility

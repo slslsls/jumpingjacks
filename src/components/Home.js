@@ -30,7 +30,7 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <div className={`${this.state.display ? '' : 'invisible'} home-background`}>
           <div className="home-frame">
             <div className="language-window">

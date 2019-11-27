@@ -8,6 +8,7 @@ import {
   Route,
   Redirect
 } from "react-router-dom";
+import './App.css';
 
 class Store {
   language = 'English'
@@ -17,7 +18,7 @@ const appStore = new Store();
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <Router>
         <Switch>
           <Route path="/holdem">

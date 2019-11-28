@@ -39,37 +39,19 @@ html, body {
   background-color: lightgray;
 }
 
-.dealer-cards-container {
-  margin: auto;
-  top: 10px;
-  position: relative;
-  height: 14.5em;
-  width: 65%;
-  border: 3px solid #F0D27E;
-}
-
-.dealer-cards-container p {
-  font-size: .8em;
-  color: #F0D27E;
-  position: absolute;
-  bottom: -12px;
-  width: 100%;
-  font-weight: bold;
-}
-
 .cards-discarded {
   margin-left: -130%;
 }
 
 .card {
-  height: 1.68in;
-  width: 1.2in;
+  height: 1.4in;
+  width: 1in;
 }
 
 .dealer-downcard {
   position: absolute;
   top: 8%;
-  left: 40%;
+  right: 23%;
   -webkit-transition:all .4s ease;
      -moz-transition:all .4s ease;
       -ms-transition:all .4s ease;
@@ -80,7 +62,7 @@ html, body {
 .dealer-upcard {
   position: absolute;
   margin-top: 15%;
-  left: 21%;
+  left: 23%;
   -webkit-transition:all .7s ease;
      -moz-transition:all .7s ease;
       -ms-transition:all .7s ease;
@@ -91,7 +73,7 @@ html, body {
 .user-backcard {
   position: absolute;
   margin-top: 15%;
-  left: 21%;
+  left: 23%;
   -webkit-transition:all .2s ease;
      -moz-transition:all .2s ease;
       -ms-transition:all .2s ease;
@@ -102,7 +84,7 @@ html, body {
 .user-frontcard {
   position: absolute;
   top: 8%;
-  left: 40%;
+  right: 23%;
   -webkit-transition:all .5s ease;
      -moz-transition:all .5s ease;
       -ms-transition:all .5s ease;
@@ -111,7 +93,7 @@ html, body {
 }
 
 .cards-pre-deal {
-  margin-top: -200%;
+  margin-top: -250%;
 }
 
 .instant-transition {
@@ -122,18 +104,36 @@ html, body {
           transition:all 0s ease;
 }
 
-.user-cards-container {
+
+.dealer-cards-container p {
+  font-size: .8em;
+  color: #F0D27E;
+  position: absolute;
+  bottom: -12px;
   width: 100%;
-  height: 240px;
+  font-weight: bold;
+}
+
+.dealer-cards-container {
   margin: auto;
   top: 10px;
   position: relative;
-  height: 14.5em;
+  height: 12.5em;
+  width: 65%;
+  border: 3px solid #F0D27E;
+}
+
+.user-cards-container {
+  width: 100%;
+  height: 12.5em;
+  margin: auto;
+  top: 10px;
+  position: relative;
   width: 65%;
 }
 
 .actions-container {
-  bottom: -110px;
+  bottom: -130px;
   padding-top: 5px;
   position: fixed;
   width: 100%;
@@ -145,7 +145,7 @@ html, body {
 .deal-again {
   color: gray;
   padding: 5px;
-  padding-top: 10px;
+  padding-top: 7px;
   -webkit-transition:all .75s ease;
      -moz-transition:all .75s ease;
       -ms-transition:all .75s ease;

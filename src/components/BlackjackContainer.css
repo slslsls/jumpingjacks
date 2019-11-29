@@ -41,6 +41,12 @@ html, body {
 
 .cards-discarded {
   margin-left: -130%;
+  margin-right: 200%;
+}
+
+.outer-container {
+  height: 100%;
+  width: 100%;
 }
 
 .card {
@@ -52,22 +58,22 @@ html, body {
   position: absolute;
   top: 8%;
   right: 23%;
-  -webkit-transition:all .4s ease;
-     -moz-transition:all .4s ease;
-      -ms-transition:all .4s ease;
-       -o-transition:all .4s ease;
-          transition:all .4s ease;
+  -webkit-transition:all .3s ease;
+     -moz-transition:all .3s ease;
+      -ms-transition:all .3s ease;
+       -o-transition:all .3s ease;
+          transition:all .3s ease;
 }
 
 .dealer-upcard {
   position: absolute;
   margin-top: 15%;
   left: 23%;
-  -webkit-transition:all .7s ease;
-     -moz-transition:all .7s ease;
-      -ms-transition:all .7s ease;
-       -o-transition:all .7s ease;
-          transition:all .7s ease;
+  -webkit-transition:all .5s ease;
+     -moz-transition:all .5s ease;
+      -ms-transition:all .5s ease;
+       -o-transition:all .5s ease;
+          transition:all .5s ease;
 }
 
 .user-backcard {
@@ -85,11 +91,11 @@ html, body {
   position: absolute;
   top: 8%;
   right: 23%;
-  -webkit-transition:all .5s ease;
-     -moz-transition:all .5s ease;
-      -ms-transition:all .5s ease;
-       -o-transition:all .5s ease;
-          transition:all .5s ease;
+  -webkit-transition:all .4s ease;
+     -moz-transition:all .4s ease;
+      -ms-transition:all .4s ease;
+       -o-transition:all .4s ease;
+          transition:all .4s ease;
 }
 
 .cards-pre-deal {

@@ -109,7 +109,7 @@ class BlackjackContainer extends React.Component {
 
   render() {
     return (
-      <div onClick={this.dealAgain}>
+      <div class="outer-container" onClick={this.dealAgain}>
         <div>
           <div className="ad"></div>
           <div className="dealer-cards-container">

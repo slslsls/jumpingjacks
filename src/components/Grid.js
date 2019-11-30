@@ -41,10 +41,6 @@ const actionClasses = {
 };
 
 class Grid extends React.Component {
-  state = {
-    text: Translations[this.props.store.language].blackjack.grid
-  };
-
   render() {
     return (
       <table>
@@ -52,23 +48,23 @@ class Grid extends React.Component {
           <tr>
             <th></th>
             <th></th>
-            <th colSpan="10">{this.state.text.dealers_card}</th>
+            <th colSpan="10">{this.props.text.dealers_card}</th>
           </tr>
           <tr>
-            <th className="your-hand-cell"><div className="your-hand-text">{this.state.text.your_hand}</div></th>
+            <th className="your-hand-cell"><div className="your-hand-text">{this.props.text.your_hand}</div></th>
             <th></th>
             {dealerCards.map((c, idx) => <th key={idx}>{c}</th>)}
           </tr>
           <tr>
             <td className="no-top-border"></td>
             <th>2 - 8</th>
-            {firstUserHandActions.map((h, idx) => <td key={idx} className={actionClasses[h]}>{this.state.text[h]}</td>)}
+            {firstUserHandActions.map((h, idx) => <td key={idx} className={actionClasses[h]}>{this.props.text[`${h}_cell`]}</td>)}
           </tr>
           {Object.keys(userHandActions).map((h, idx) =>
             <tr key={idx}>
               <td className="no-top-border"></td>
               <th>{h}</th>
-              {userHandActions[h].map((h, idx) => <td  key={idx} className={actionClasses[h]}>{this.state.text[h]}</td>)}
+              {userHandActions[h].map((h, idx) => <td  key={idx} className={actionClasses[h]}>{this.props.text[`${h}_cell`]}</td>)}
             </tr>
           )}
         </tbody>

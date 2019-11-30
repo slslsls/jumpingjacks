@@ -4,7 +4,7 @@
 
 html, body {
   margin: 0;
-  height: 100%;
+  height: 110%;
 }
 
 .action-button {
@@ -43,7 +43,7 @@ html, body {
 }
 
 .outer-container {
-  height: 110%;
+  height: 100%;
   width: 100%;
 }
 

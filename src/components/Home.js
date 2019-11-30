@@ -5,9 +5,7 @@ import './Home.css';
 
 class Home extends React.Component {
   state = {
-    display: false,
-    text: Translations[this.props.store.language].home,
-    selectedLanguage: this.props.store.language
+    display: false
   };
 
   componentDidMount = () => {
@@ -20,7 +18,6 @@ class Home extends React.Component {
 
   changeLanguage = (newLanguage) => {
     return () => {
-      this.props.store.language = newLanguage;
       this.setState({
         text: Translations[newLanguage].home,
         selectedLanguage: newLanguage
@@ -33,19 +30,11 @@ class Home extends React.Component {
       <div className="container">
         <div className={`${this.state.display ? '' : 'invisible'} home-background`}>
           <div className="home-frame">
-            <div className="language-window">
-              {Object.keys(Translations).map((l, idx ) =>
-                <div
-                  key={idx}
-                  className={`language ${this.state.selectedLanguage === l ? 'selected-language' : ''}`}
-                  onClick={this.changeLanguage(l)}
-                >
-                  {l}
-                </div>)}
-            </div>
-            <Link to="/practice-blackjack">
-              <div className="nav-button">{this.state.text.practice_blackjack}</div>
-            </Link>
+            {Object.keys(Translations).map((l, idx ) =>
+              <Link to={`/practice-blackjack-${l}`}>
+                <h1 className="nav-button">{Translations[l].practice_blackjack}</h1>
+              </Link>)
+            }
           </div>
         </div>
       </div>

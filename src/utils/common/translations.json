@@ -1,194 +1,122 @@
 {
-  "English": {
-    "language": "english",
-    "home": {
-      "practice_blackjack": "Practice Blackjack"
-    },
-    "blackjack": {
-      "gameplay": {
-        "dealer": "DEALER",
-        "double_down": "DD",
-        "split": "Split",
-        "stay": "Stay",
-        "hit": "Hit",
-        "deal_again": "Tap anywhere to deal again!"
-      },
-      "grid": {
-        "dealers_card": "Dealer's Card",
-        "your_hand": "Your Hand",
-        "double_down": "DD",
-        "split": "Sp",
-        "stay": "St",
-        "hit": "H"
-      }
-    }
+  "english": {
+    "practice_blackjack": "Practice Blackjack",
+    "dealer": "DEALER",
+    "double_down": "DD",
+    "split": "Split",
+    "stay": "Stay",
+    "hit": "Hit",
+    "deal_again": "Tap anywhere to deal again!",
+    "dealers_card": "Dealer's Card",
+    "your_hand": "Your Hand",
+    "double_down_cell": "DD",
+    "split_cell": "Sp",
+    "stay_cell": "St",
+    "hit_cell": "H"
   },
-  "Português": {
-    "language": "portuguese",
-    "home": {
-      "practice_blackjack": "Praticar Vinte e Um"
-    },
-    "blackjack": {
-      "gameplay": {
-        "dealer": "NEGOCIANTE DO CASSINO",
-        "double_down": "Dobrar",
-        "split": "Dividir",
-        "stay": "Perm.",
-        "hit": "Tirar",
-        "deal_again": "Toque em qualquer lugar para recomeçar!"
-      },
-      "grid": {
-        "dealers_card": "Cartas do Negociante",
-        "your_hand": "Suas Cartas",
-        "double_down": "Dob",
-        "split": "Div",
-        "stay": "P",
-        "hit": "T"
-      }
-    }
+  "portuguese": {
+    "practice_blackjack": "Praticar Vinte e Um",
+    "dealer": "NEGOCIANTE DO CASSINO",
+    "double_down": "Dobrar",
+    "split": "Dividir",
+    "stay": "Perm.",
+    "hit": "Tirar",
+    "deal_again": "Toque em qualquer lugar para recomeçar!",
+    "dealers_card": "Cartas do Negociante",
+    "your_hand": "Suas Cartas",
+    "double_down_cell": "Dob",
+    "split_cell": "Div",
+    "stay_cell": "P",
+    "hit_cell": "T"
   },
-  "官话": {
-    "language": "mandarin",
-    "home": {
-      "practice_blackjack": "练习 二十一點"
-    },
-    "blackjack": {
-      "gameplay": {
-        "dealer": "赌场经销商",
-        "double_down": "加倍",
-        "split": "分牌",
-        "stay": "停叫",
-        "hit": "叫牌",
-        "deal_again": "点按任意位置即可再次交易"
-      },
-      "grid": {
-        "dealers_card": "经销商卡",
-        "your_hand": "您的卡",
-        "double_down": "加倍",
-        "split": "分牌",
-        "stay": "停叫",
-        "hit": "叫牌"
-      }
-    }
+  "mandarin": {
+    "practice_blackjack": "练习 二十一點",
+    "dealer": "赌场经销商",
+    "double_down": "加倍",
+    "split": "分牌",
+    "stay": "停叫",
+    "hit": "叫牌",
+    "deal_again": "点按任意位置即可再次交易",
+    "dealers_card": "经销商卡",
+    "your_hand": "您的卡",
+    "double_down_cell": "加倍",
+    "split_cell": "分牌",
+    "stay_cell": "停叫",
+    "hit_cell": "叫牌"
   },
-  "Español": {
-    "language": "spanish",
-    "home": {
-      "practice_blackjack": "Practicar Veintiuna"
-    },
-    "blackjack": {
-      "gameplay": {
-        "dealer": "DISTRIBUIDOR DE CASINO",
-        "double_down": "Doblar",
-        "split": "Dividir",
-        "stay": "Perm.",
-        "hit": "Tirar",
-        "deal_again": "Toque en cualquier lugar para volver a negociar!"
-      },
-      "grid": {
-        "dealers_card": "Naipe de Distribuidor",
-        "your_hand": "Sus Naipes",
-        "double_down": "Dob",
-        "split": "Div",
-        "stay": "P",
-        "hit": "T"
-      }
-    }
+  "spanish": {
+    "practice_blackjack": "Practicar Veintiuna",
+    "dealer": "DISTRIBUIDOR DE CASINO",
+    "double_down": "Doblar",
+    "split": "Dividir",
+    "stay": "Perm.",
+    "hit": "Tirar",
+    "deal_again": "Toque en cualquier lugar para volver a negociar!",
+    "dealers_card": "Naipe de Distribuidor",
+    "your_hand": "Sus Naipes",
+    "double_down_cell": "Dob",
+    "split_cell": "Div",
+    "stay_cell": "P",
+    "hit_cell": "T"
   },
-  "Bahasa Melayu": {
-    "language": "malay",
-    "home": {
-      "practice_blackjack": "Berlatih Dua Puluh Satu"
-    },
-    "blackjack": {
-      "gameplay": {
-        "dealer": "Penjual Kasino",
-        "double_down": "Kembar",
-        "split": "Berp.",
-        "stay": "Tinggal",
-        "hit": "Kad Lain",
-        "deal_again": "Ketuk mana-mana sahaja untuk berurusan lagi!"
-      },
-      "grid": {
-        "dealers_card": "Kad Penjual",
-        "your_hand": "Kad Anda",
-        "double_down": "K",
-        "split": "B",
-        "stay": "T",
-        "hit": "L"
-      }
-    }
+  "malay": {
+    "practice_blackjack": "Berlatih Dua Puluh Satu",
+    "dealer": "Penjual Kasino",
+    "double_down": "Kembar",
+    "split": "Berp.",
+    "stay": "Tinggal",
+    "hit": "Kad Lain",
+    "deal_again": "Ketuk mana-mana sahaja untuk berurusan lagi!",
+    "dealers_card": "Kad Penjual",
+    "your_hand": "Kad Anda",
+    "double_down_cell": "K",
+    "split_cell": "B",
+    "stay_cell": "T",
+    "hit_cell": "L"
   },
-  "Filipino": {
-    "language": "filipino",
-    "home": {
-      "practice_blackjack": "Pagsasanay Veintiuno"
-    },
-    "blackjack": {
-      "gameplay": {
-        "dealer": "Dealer",
-        "double_down": "Doble",
-        "split": "Pagbyak",
-        "stay": "Manatili",
-        "hit": "Isa Pang",
-        "deal_again": "I-tap kahit saan upang makitungo muli!"
-      },
-      "grid": {
-        "dealers_card": "Card ng Dealer",
-        "your_hand": "Iyong Card",
-        "double_down": "D",
-        "split": "P",
-        "stay": "M",
-        "hit": "I"
-      }
-    }
+  "filipino": {
+    "practice_blackjack": "Pagsasanay Veintiuno",
+    "dealer": "Dealer",
+    "double_down": "Doble",
+    "split": "Pagbyak",
+    "stay": "Manatili",
+    "hit": "Isa Pang",
+    "deal_again": "I-tap kahit saan upang makitungo muli!",
+    "dealers_card": "Card ng Dealer",
+    "your_hand": "Iyong Card",
+    "double_down_cell": "D",
+    "split_cell": "P",
+    "stay_cell": "M",
+    "hit_cell": "I"
   },
-  "Français": {
-    "language": "french",
-    "home": {
-      "practice_blackjack": "Pratiquer Vingt et Un"
-    },
-    "blackjack": {
-      "gameplay": {
-        "dealer": "Revendeur",
-        "double_down": "Doubler",
-        "split": "Partager",
-        "stay": "Rester",
-        "hit": "Tirer",
-        "deal_again": "Appuyez n'importe où pour traiter à nouveau!"
-      },
-      "grid": {
-        "dealers_card": "Carte du Revendeur",
-        "your_hand": "Vos Cartes",
-        "double_down": "D",
-        "split": "P",
-        "stay": "R",
-        "hit": "T"
-      }
-    }
+  "french": {
+    "practice_blackjack": "Pratiquer Vingt et Un",
+    "dealer": "Revendeur",
+    "double_down": "Doubler",
+    "split": "Partager",
+    "stay": "Rester",
+    "hit": "Tirer",
+    "deal_again": "Appuyez n'importe où pour traiter à nouveau!",
+    "dealers_card": "Carte du Revendeur",
+    "your_hand": "Vos Cartes",
+    "double_down_cell": "D",
+    "split_cell": "P",
+    "stay_cell": "R",
+    "hit_cell": "T"
   },
-  "Italiano": {
-    "language": "italian",
-    "home": {
-      "practice_blackjack": "Pratica Ventuno"
-    },
-    "blackjack": {
-      "gameplay": {
-        "dealer": "Rivenditore",
-        "double_down": "Radd.",
-        "split": "Dividi",
-        "stay": "Resta",
-        "hit": "Pesca",
-        "deal_again": "Toccare un punto qualsiasi per trattare di nuovo!"
-      },
-      "grid": {
-        "dealers_card": "Carta del Rivenditore",
-        "your_hand": "Le Tue Carte",
-        "double_down": "Rad",
-        "split": "D",
-        "stay": "Res",
-        "hit": "P"
-      }
-    }
+  "italian": {
+    "practice_blackjack": "Pratica Ventuno",
+    "dealer": "Rivenditore",
+    "double_down": "Radd.",
+    "split": "Dividi",
+    "stay": "Resta",
+    "hit": "Pesca",
+    "deal_again": "Toccare un punto qualsiasi per trattare di nuovo!",
+    "dealers_card": "Carta del Rivenditore",
+    "your_hand": "Le Tue Carte",
+    "double_down_cell": "Rad",
+    "split_cell": "D",
+    "stay_cell": "Res",
+    "hit_cell": "P"
   }
 }

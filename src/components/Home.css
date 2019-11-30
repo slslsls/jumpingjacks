@@ -22,7 +22,7 @@ body, html {
   height: 100%;
   background: url(/background.png) repeat;
   background-size: 395px 395px;
-  padding-top: 100px;
+  padding-top: 70px;
   -webkit-transition:all .5s ease;
      -moz-transition:all .5s ease;
       -ms-transition:all .5s ease;
@@ -33,18 +33,19 @@ body, html {
 .home-frame {
   width: 320px;
   margin: auto;
-  margin-top: 75px;
   border-radius: 5px;
   background-color: rgb(255, 255, 255, .22);
   padding: 20px;
+  padding-top: .1px;
 }
 
 .nav-button {
   padding: 18px;
   background-color: #00a47f;
-  margin-top: 50px;
+  margin-top: 40px;
   border-radius: 5px;
   font-size: 1.5em;
+  font-weight: normal;
 }
 
 .language-window {

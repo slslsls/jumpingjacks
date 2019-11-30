@@ -205,8 +205,8 @@ html, body {
 }
 
 .grid {
-  left: 10px;
-  top: 100px;
+  left: 5%;
+  top: 14%;
   position: fixed;
   -webkit-transition:all .5s ease;
      -moz-transition:all .5s ease;
@@ -216,5 +216,5 @@ html, body {
 }
 
 .grid-offscreen {
-  left: 450px;
+  left: 110%;
 }

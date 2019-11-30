@@ -206,7 +206,7 @@ html, body {
 
 .grid {
   left: 5%;
-  top: 5%;
+  top: 3%;
   position: fixed;
   -webkit-transition:all .5s ease;
      -moz-transition:all .5s ease;

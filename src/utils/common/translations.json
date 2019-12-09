@@ -31,18 +31,18 @@
   },
   "mandarin": {
     "practice_blackjack": "练习 二十一點",
-    "dealer": "赌场经销商",
+    "dealer": "庄家",
     "double_down": "加倍",
     "split": "分牌",
-    "stay": "停叫",
-    "hit": "叫牌",
-    "deal_again": "点按任意位置即可再次交易",
-    "dealers_card": "经销商卡",
-    "your_hand": "您的卡",
+    "stay": "停牌",
+    "hit": "拿牌",
+    "deal_again": "按任何地方再玩一次",
+    "dealers_card": "庄家的牌",
+    "your_hand": "您的牌",
     "double_down_cell": "加倍",
     "split_cell": "分牌",
-    "stay_cell": "停叫",
-    "hit_cell": "叫牌"
+    "stay_cell": "停牌",
+    "hit_cell": "拿牌"
   },
   "spanish": {
     "practice_blackjack": "Practicar Veintiuna",

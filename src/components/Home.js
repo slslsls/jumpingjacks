@@ -31,7 +31,7 @@ class Home extends React.Component {
         <div className={`${this.state.display ? '' : 'invisible'} home-background`}>
           <div className="home-frame">
             {Object.keys(Translations).map((l, idx ) =>
-              <Link to={`/practice-blackjack-${l}`}>
+              <Link key={idx} to={`/practice-blackjack-${l}`}>
                 <h1 className="nav-button">{Translations[l].practice_blackjack}</h1>
               </Link>)
             }

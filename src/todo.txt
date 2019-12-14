@@ -1,4 +1,4 @@
 search for to-do's
-change cursor to pointer when hovering over links/buttons
-remove uncompressed background image from build dir
 accessibility
+configure nginx 404 behavior (if you go to jumpingjacks.io/<anything>, you get nginx 404 page)
+get ad sense

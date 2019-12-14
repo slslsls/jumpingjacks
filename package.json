@@ -20,7 +20,8 @@
     "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy-production": "npm run build && scp -r ./build/* root@157.245.217.156:/var/www/jumpingjacks.io/html"
   },
   "eslintConfig": {
     "extends": "react-app"

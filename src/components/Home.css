@@ -22,7 +22,7 @@ body, html {
   height: 100%;
   background: url(/background_compressed.png) repeat;
   background-size: 395px 395px;
-  padding-top: 70px;
+  padding-top: 50px;
   -webkit-transition:all .5s ease;
      -moz-transition:all .5s ease;
       -ms-transition:all .5s ease;
@@ -40,11 +40,11 @@ body, html {
 }
 
 .nav-button {
-  padding: 16px;
+  padding: 12px;
   background-color: #00a47f;
   margin-top: 31px;
   border-radius: 5px;
-  font-size: 1.2em;
+  font-size: 1.25em;
   font-weight: normal;
 }
 

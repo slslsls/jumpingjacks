@@ -89,21 +89,6 @@
     "stay_cell": "M",
     "hit_cell": "I"
   },
-  "french": {
-    "practice_blackjack": "Pratiquer Vingt et Un",
-    "dealer": "Revendeur",
-    "double_down": "Doubler",
-    "split": "Partager",
-    "stay": "Rester",
-    "hit": "Tirer",
-    "deal_again": "Appuyez n'importe où pour traiter à nouveau!",
-    "dealers_card": "Carte du Revendeur",
-    "your_hand": "Vos Cartes",
-    "double_down_cell": "D",
-    "split_cell": "P",
-    "stay_cell": "R",
-    "hit_cell": "T"
-  },
   "italian": {
     "practice_blackjack": "Pratica Ventuno",
     "dealer": "Rivenditore",

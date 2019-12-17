@@ -1,4 +1,2 @@
-search for to-do's
 accessibility
-configure nginx 404 behavior (if you go to jumpingjacks.io/<anything>, you get nginx 404 page)
 get ad sense

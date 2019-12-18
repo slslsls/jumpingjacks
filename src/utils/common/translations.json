@@ -44,21 +44,6 @@
     "stay_cell": "停牌",
     "hit_cell": "拿牌"
   },
-  "spanish": {
-    "practice_blackjack": "Practicar Veintiuna",
-    "dealer": "DISTRIBUIDOR DE CASINO",
-    "double_down": "Doblar",
-    "split": "Dividir",
-    "stay": "Perm.",
-    "hit": "Tirar",
-    "deal_again": "Toque en cualquier lugar para volver a negociar!",
-    "dealers_card": "Naipe de Distribuidor",
-    "your_hand": "Sus Naipes",
-    "double_down_cell": "Dob",
-    "split_cell": "Div",
-    "stay_cell": "P",
-    "hit_cell": "T"
-  },
   "malay": {
     "practice_blackjack": "Berlatih Dua Puluh Satu",
     "dealer": "Penjual Kasino",

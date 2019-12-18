@@ -4,7 +4,7 @@
 
 html, body {
   margin: 0;
-  height: 110%;
+  height: 100%;
 }
 
 .action-button {
@@ -176,12 +176,12 @@ html, body {
   font-weight: bold;
 }
 
-.ad {
+/* .ad {
   margin: auto;
   width: 320px;
   height: 100px;
   background-color: blue;
-}
+} */
 
 .info-button {
   height: 35px;

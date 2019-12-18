@@ -18,6 +18,7 @@ html, body {
   color: white;
   font-weight: bold;
   font-size: 1.1em;
+  cursor: pointer;
   -webkit-transition:all .2s ease;
      -moz-transition:all .2s ease;
       -ms-transition:all .2s ease;
@@ -124,11 +125,13 @@ html, body {
   position: relative;
   height: 12.5em;
   width: 65%;
+  max-width: 310px;
   border: 3px solid #F0D27E;
 }
 
 .user-cards-container {
   width: 100%;
+  max-width: 310px;
   height: 12.5em;
   margin: auto;
   top: 10px;
@@ -188,6 +191,7 @@ html, body {
   bottom: 15px;
   padding: 0;
   z-index: 10;
+  cursor: pointer;
 }
 
 .home-button {

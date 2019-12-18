@@ -13,9 +13,6 @@ import Translations from '../utils/common/translations';
 function App() {
   return (
     <div className="container">
-      <head>
-        <script data-ad-client="ca-pub-8702177307435848" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-      </head>
       <Router>
         <Switch>
           <Route path="/practice-blackjack-english">
